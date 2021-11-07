@@ -1,0 +1,15 @@
+	//else if(~(clr_cmd_rdy&clr_rx_rdy) & (~RX)) cmd_rdy <= 0;
+	//else if((clr_cmd_rdy&clr_rx_rdy) & (RX)) cmd_rdy <= 1;
+
+
+// ASSIGN CMD_RDY USING S-R OF CLE_CMD_RDY AND ~RX
+always_ff @(posedge clk or negedge rst_n) begin
+
+	if(!rst_n) cmd_rdy <= 1'b0;
+	else if(clr_cmd_rdy&clr_rx_rdy&TX) cmd_rdy <= 1'b1;
+	else cmd_rdy <= 1'b0;
+	
+	
+	end
+// S-> CLR_CMD_RDY (FROM SM)
+// R-> ~RX

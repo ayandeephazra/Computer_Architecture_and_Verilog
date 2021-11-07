@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/ProgramFiles/ModelSim
+vD_FF_Asynch
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1633576861
+!i10b 1
+!s100 2df0SF2PDHeeI6G5Z@IgS1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+If:FPa]VkI=<W=[H@E5WZS2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/Users/Ayan Deep Hazra/Desktop/Semesters/FALL 2021/ECE551/HW2/P3
+Z5 w1633576855
+Z6 8C:\Users\Ayan Deep Hazra\Desktop\Semesters\FALL 2021\ECE551\HW2\P3\HW2_prob4.sv
+Z7 FC:\Users\Ayan Deep Hazra\Desktop\Semesters\FALL 2021\ECE551\HW2\P3\HW2_prob4.sv
+!i122 3
+L0 21 13
+Z8 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z9 !s108 1633576860.000000
+Z10 !s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\FALL 2021\ECE551\HW2\P3\HW2_prob4.sv|
+Z11 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\FALL 2021\ECE551\HW2\P3\HW2_prob4.sv|
+!i113 1
+Z12 o-work work -sv
+Z13 tCvgOpt 0
+n@d_@f@f_@asynch
+vD_FF_S
+R0
+!s110 1633576004
+!i10b 1
+!s100 KJnU<S[[?`Zn3T5[PPaio0
+R2
+IEP>j0c7D_`XjaR_Yab_z_3
+R3
+S1
+R4
+w1633575999
+R6
+R7
+!i122 0
+Z14 L0 7 11
+R8
+r1
+!s85 0
+31
+!s108 1633576003.000000
+R10
+R11
+!i113 1
+R12
+R13
+n@d_@f@f_@s
+vD_FF_Synch
+R0
+R1
+!i10b 1
+!s100 ;<j[^m1_99[@Ce7Hz1:R]1
+R2
+IPQI23D0zYfN[Y:XiSIP1H3
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 3
+R14
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@d_@f@f_@synch
+vSR_FF_Asynch
+R0
+R1
+!i10b 1
+!s100 5_zoT7?j5_U1S`oL>d`?o1
+R2
+ICK;2@C>XAD[>=SbNdIB3d1
+R3
+S1
+R4
+R5
+R6
+R7
+!i122 3
+L0 37 14
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+n@s@r_@f@f_@asynch

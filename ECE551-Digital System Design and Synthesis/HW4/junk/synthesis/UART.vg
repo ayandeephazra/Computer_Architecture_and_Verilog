@@ -1,0 +1,2564 @@
+     ┌────────────────────────────────────────────────────────────────────┐
+     │                • MobaXterm Personal Edition v20.6 •                │
+     │              (X server, SSH client and network tools)              │
+     │                                                                    │
+     │ ➤ Your computer drives are accessible through the /drives path     │
+     │ ➤ Your DISPLAY is set to 10.140.58.143:0.0                         │
+     │ ➤ When using SSH, your remote DISPLAY is automatically forwarded   │
+     │ ➤ Your HOME folder is not persistent: it will be erased on restart │
+     │ ➤ Each command status is specified by a special symbol (✔ or ✘)    │
+     │                                                                    │
+     │ • Important:                                                       │
+     │ This is MobaXterm Personal Edition. The Professional edition       │
+     │ allows you to customize MobaXterm for your company: you can add    │
+     │ your own logo, your parameters, your welcome message and generate  │
+     │ either an MSI installation package or a portable executable.       │
+     │ We can also modify MobaXterm or develop the plugins you need.      │
+     │ For more information: https://mobaxterm.mobatek.net/download.html  │
+     └────────────────────────────────────────────────────────────────────┘
+
+  03/11/2021   10:14.40   /home/mobaxterm  ssh ahazra2@best-tux.cae.wisc.edu
+Warning: Permanently added 'best-tux.cae.wisc.edu' (RSA) to the list of known hosts.
+Password:
+Password:
+Password:
+Permission denied (publickey,keyboard-interactive).
+                                                                                                                 ✘
+
+  03/11/2021   10:15.27   /home/mobaxterm  ssh ahazra2@best-tux.cae.wisc.edu
+Password:
+Password:
+Duo two-factor login for ahazra2
+
+Enter a passcode or select one of the following options:
+
+ 1. Duo Push to XXX-XXX-4007
+
+Passcode or option (1-1): 1
+Success. Logging you in...
+Linux tux-167 4.19.0-18-amd64 #1 SMP Debian 4.19.208-1 (2021-09-29) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+tux-167:~$ ls
+'$RECYCLE.BIN'/              desktop.ini   PennSim.jar    tutorial.obj   win/
+'Custom Office Templates'/   ece551/       tutorial.asm   tutorial.sym
+tux-167:~$ cd ece551/
+tux-167:~/ece551$ ls
+Exercise17/
+tux-167:~/ece551$ cd Exercise17/
+tux-167:~/ece551/Exercise17$ ls
+command.log  filenames.log  UART.dc  UART_rx.sv*  UART_tx.sv*  UART.v*
+tux-167:~/ece551/Exercise17$ vi UART.dc
+tux-167:~/ece551/Exercise17$ cat UART
+cat: UART: No such file or directory
+tux-167:~/ece551/Exercise17$ cat UART.dc
+############################################################################
+#read_file –format sverilog { ./UART_tx.sv ./UART_rx.sv ./UART.v}
+
+read_file -format sverilog { ./UART_tx.sv  ./UART_rx.sv ./UART.v}
+
+
+set current_design UART
+
+
+compile -map_effort medium
+
+
+create_clock -name "clk" -period 2 -waveform {0 1} {clk}
+
+
+set_dont_touch_network [find port clk]
+
+
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+
+set_input_delay -clock clk 0.4 $prim_inputs
+
+
+set_output_delay -clock clk 0.4 [all_outputs]
+
+
+set_load 0.1 [all_outputs]
+
+
+set_max_transition 0.15 [current_design]
+
+
+set_wire_load_model -name 16000 -library saed32lvt_tt0p85v25c
+
+
+set_driving_cell -lib_cell NAND2X2_LVT -library saed32lvt_tt0p85v25c $prim_inputs
+
+
+compile -map_effort medium
+
+
+ungroup -all -flatten
+
+
+compile -map_effort medium
+
+
+
+#Generate timing and area report
+
+report_timing -delay min > max_delay.rpt
+
+report_timing -delay max > min_delay.rpt
+
+report_area > area.rpt
+
+
+ungroup -all -flatten
+tux-167:~/ece551/Exercise17$ ls
+command.log  filenames.log  UART.dc  UART_rx.sv*  UART_tx.sv*  UART.v*
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> UART.dc
+Error: unknown command 'UART.dc' (CMD-005)
+dc_shell>
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$ cd ~
+tux-167:~$ ls]
+-bash: ls]: command not found
+tux-167:~$ ls
+'$RECYCLE.BIN'/              desktop.ini   PennSim.jar    tutorial.obj   win/
+'Custom Office Templates'/   ece551/       tutorial.asm   tutorial.sym
+tux-167:~$ pwd
+/filespace/a/ahazra2
+tux-167:~$ cd ece551/
+tux-167:~/ece551$ cp -r ~ece551/public/tutorials/designvision ./
+tux-167:~/ece551$ cd designvision
+tux-167:~/ece551/designvision$  gedit .synopsys_dc.setup
+cccc
+tux-167:~/ece551/designvision$
+tux-167:~/ece551/designvision$
+tux-167:~/ece551/designvision$
+tux-167:~/ece551/designvision$ ls
+dv_tutorial/
+tux-167:~/ece551/designvision$ pwd
+/filespace/a/ahazra2/ece551/designvision
+tux-167:~/ece551/designvision$ cd dv_tutorial/
+tux-167:~/ece551/designvision/dv_tutorial$ ls
+commMod_tb.v*  commMod.v*  CRC.v*  UART_rcv.v*  UART_tx.v*  UART.v*
+tux-167:~/ece551/designvision/dv_tutorial$ pwd
+/filespace/a/ahazra2/ece551/designvision/dv_tutorial
+tux-167:~/ece551/designvision/dv_tutorial$ cd ../
+tux-167:~/ece551/designvision$ ls
+dv_tutorial/
+tux-167:~/ece551/designvision$ pwd
+/filespace/a/ahazra2/ece551/designvision
+tux-167:~/ece551/designvision$ cd dv_tutorial/
+tux-167:~/ece551/designvision/dv_tutorial$ ls
+commMod_tb.v*  commMod.v*  CRC.v*  UART_rcv.v*  UART_tx.v*  UART.v*
+tux-167:~/ece551/designvision/dv_tutorial$ pwd
+/filespace/a/ahazra2/ece551/designvision/dv_tutorial
+tux-167:~/ece551/designvision/dv_tutorial$ cd ../
+tux-167:~/ece551/designvision$ ls
+dv_tutorial/
+tux-167:~/ece551/designvision$ vi .synopsys_dc.setup
+tux-167:~/ece551/designvision$ cp .synopsys_dc.setup ~/
+tux-167:~/ece551/designvision$ cd ~
+tux-167:~$ ls
+'$RECYCLE.BIN'/              desktop.ini   PennSim.jar    tutorial.obj   win/
+'Custom Office Templates'/   ece551/       tutorial.asm   tutorial.sym
+tux-167:~$ cd  ece551/
+tux-167:~/ece551$ ls
+designvision/  Exercise17/
+tux-167:~/ece551$ cd designvision/
+tux-167:~/ece551/designvision$ ls
+dv_tutorial/
+tux-167:~/ece551/designvision$ cp .synopsys_dc.setup ~
+cp: overwrite '/filespace/a/ahazra2/.synopsys_dc.setup'? n
+tux-167:~/ece551/designvision$ ls
+dv_tutorial/
+tux-167:~/ece551/designvision$ cd dv_tutorial/
+tux-167:~/ece551/designvision/dv_tutorial$  /cae/apps/bin/design_vision
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+4.1
+read_file -format ddc {/filespace/a/ahazra2/ece551/Exercise17/UART.dc}
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db'
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Error: Unable to open file '/filespace/a/ahazra2/ece551/Exercise17/UART.dc' for reading. (DDC-2)
+Loaded 0 designs.
+design_vision> read_file -format verilog {/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART.v}
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v
+Information:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:1: List () of one, unnamed, port is ignored. (VER-988)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:13: the undeclared symbol 'rdy_DUT' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:14: the undeclared symbol 'Bp' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:14: the undeclared symbol 'Am' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:16: the undeclared symbol 'rdy_RCV' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:19: The statements in initial blocks are ignored. (VER-281)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:75: delay controls are ignored for synthesis. (VER-176)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:43: the undeclared symbol 'rx_rdy' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:44: the undeclared symbol 'tx_done' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:44: the undeclared symbol 'mid_bit' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:50: the undeclared symbol 'rset_crc' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:50: the undeclared symbol 'msg_in' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:74: the undeclared symbol 'rx_rdy_posedge' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v:52: The value 400 is too large for the numeric data type being used (VER-1)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v:53: The value 0000 is too large for the numeric data type being used (VER-1)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v:55: The value 0000 is too large for the numeric data type being used (VER-1)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:13: Net rst_n connected to instance iDUT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:13: Net trmt connected to instance iDUT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:13: Net txdata connected to instance iDUT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:13: Net clr_rdy_DUT connected to instance iDUT is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:16: Net rst_n connected to instance iRCV is declared as reg data type but is not driven by an always block. (VER-1004)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod_tb.v:16: Net clr_rdy_RCV connected to instance iRCV is declared as reg data type but is not driven by an always block. (VER-1004)
+
+Statistics for case statements in always block at line 110 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           122            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine commMod line 57 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pckt_rdy_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 68 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rx_rdy_ff_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 79 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     txhigh_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 86 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rxdata_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 104 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred tri-state devices in process
+        in routine commMod line 201 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|    Bp_tri     | Tri-State Buffer |   1   |
+============================================
+
+Inferred tri-state devices in process
+        in routine commMod line 202 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|    Am_tri     | Tri-State Buffer |   1   |
+============================================
+
+Inferred memory devices in process
+        in routine CRC line 12 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    signature_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 95 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           105            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 32 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 41 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 50 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 61 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 68 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_rdy_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 80 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 84 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine uart_tx line 32 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 42 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 51 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 62 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 73 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 6 designs.
+Current design is 'commMod_tb'.
+design_vision>
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/designvision/dv_tutorial$  /cae/apps/bin/design_vision
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+4.1
+read_file -format verilog {/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART.v}
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db'
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:43: the undeclared symbol 'rx_rdy' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:44: the undeclared symbol 'tx_done' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:44: the undeclared symbol 'mid_bit' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:50: the undeclared symbol 'rset_crc' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:50: the undeclared symbol 'msg_in' assumed to have the default net type, which is 'wire'. (VER-936)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v:74: the undeclared symbol 'rx_rdy_posedge' assumed to have the default net type, which is 'wire'. (VER-936)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v:52: The value 400 is too large for the numeric data type being used (VER-1)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v:53: The value 0000 is too large for the numeric data type being used (VER-1)
+Warning:  /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v:55: The value 0000 is too large for the numeric data type being used (VER-1)
+Compiling source file /filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART.v
+
+Statistics for case statements in always block at line 110 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           122            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine commMod line 57 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    pckt_rdy_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 68 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    rx_rdy_ff_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 79 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     txhigh_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 86 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rxdata_reg      | Flip-flop |  16   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine commMod line 104 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   3   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred tri-state devices in process
+        in routine commMod line 201 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|    Bp_tri     | Tri-State Buffer |   1   |
+============================================
+
+Inferred tri-state devices in process
+        in routine commMod line 202 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/commMod.v'.
+============================================
+| Register Name |       Type       | Width |
+============================================
+|    Am_tri     | Tri-State Buffer |   1   |
+============================================
+
+Inferred memory devices in process
+        in routine CRC line 12 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/CRC.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    signature_reg    | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 95 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           105            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 32 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 41 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 50 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 61 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 68 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_rdy_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_rcv line 80 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_rcv.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 84 in file
+        '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            93            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine uart_tx line 32 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 42 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 51 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  10   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 62 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine uart_tx line 73 in file
+                '/filespace/a/ahazra2/ece551/designvision/dv_tutorial/UART_tx.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 5 designs.
+Current design is 'commMod'.
+design_vision>
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/designvision/dv_tutorial$
+tux-167:~/ece551/designvision/dv_tutorial$  /cae/apps/bin/design_vision
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+4.1
+
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/designvision/dv_tutorial$
+tux-167:~/ece551/designvision/dv_tutorial$
+tux-167:~/ece551/designvision/dv_tutorial$ design_vision –shell dc_shell
+Error: Unexpected argument '–shell'
+Error: Unexpected argument 'dc_shell'
+
+Usage:  /cae/apps/data/synopsys-2021/syn/S-2021.06/linux64/syn/bin/common_shell_exec
+        -shell % (Shell Name psyn_shell/dc_shell/dc_sms_shell/de_shell/dcnxt_shell/lc_shell/ptxr)
+        -r % (synopsys root path)
+        -f % (execute_command file (optional))
+        -x % (command to execute (optional))
+        -no_init (don't load initialization files (optional))
+        -no_home_init (don't load home .synopsys file (optional))
+        -no_local_init (don't load local .synopsys file (optional))
+        -checkout % (check out these features (optional))
+        -timeout # (exit if license server fails to respond
+                    after these number of minutes (optional))
+        -wait # (exit if feature_list is not all available
+                 after these number of minutes (optional))
+        -version (show product version and exit immediately (optional))
+        -64bit (use 64-bit executable (optional))
+        -no_log (don't log commands (optional))
+        -output_log_file % (log console output to a file (optional))
+        -help  (display this information)
+        -galaxy (Galileo license backward compatibility mode)
+        -gui (run shell with gui (optional))
+        -no_gui (run shell without gui (optional))
+        -topographical_mode (run shell in Topographical mode. By default, de_shell commands run in topographical mode)
+
+
+tux-167:~/ece551/designvision/dv_tutorial$ design_vision dc_shell
+Error: Unexpected argument 'dc_shell'
+
+Usage:  /cae/apps/data/synopsys-2021/syn/S-2021.06/linux64/syn/bin/common_shell_exec
+        -shell % (Shell Name psyn_shell/dc_shell/dc_sms_shell/de_shell/dcnxt_shell/lc_shell/ptxr)
+        -r % (synopsys root path)
+        -f % (execute_command file (optional))
+        -x % (command to execute (optional))
+        -no_init (don't load initialization files (optional))
+        -no_home_init (don't load home .synopsys file (optional))
+        -no_local_init (don't load local .synopsys file (optional))
+        -checkout % (check out these features (optional))
+        -timeout # (exit if license server fails to respond
+                    after these number of minutes (optional))
+        -wait # (exit if feature_list is not all available
+                 after these number of minutes (optional))
+        -version (show product version and exit immediately (optional))
+        -64bit (use 64-bit executable (optional))
+        -no_log (don't log commands (optional))
+        -output_log_file % (log console output to a file (optional))
+        -help  (display this information)
+        -galaxy (Galileo license backward compatibility mode)
+        -gui (run shell with gui (optional))
+        -no_gui (run shell without gui (optional))
+        -topographical_mode (run shell in Topographical mode. By default, de_shell commands run in topographical mode)
+
+
+tux-167:~/ece551/designvision/dv_tutorial$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> source UART.dc
+Error: could not open script file "UART.dc" (CMD-015)
+dc_shell>
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/designvision/dv_tutorial$
+tux-167:~/ece551/designvision/dv_tutorial$ ls
+COMMMOD.mr              commMod-verilog.pvl  default.svf           uart_rcv-verilog.syn  uart-verilog.pvl
+COMMMOD_TB.mr           commMod-verilog.syn  filenames.log         UART_TX.mr            uart-verilog.syn
+commMod_tb.v*           CRC.mr               UART.mr               UART_tx.v*
+commMod_tb-verilog.pvl  CRC.v*               UART_RCV.mr           uart_tx-verilog.pvl
+commMod_tb-verilog.syn  CRC-verilog.pvl      UART_rcv.v*           uart_tx-verilog.syn
+commMod.v*              CRC-verilog.syn      uart_rcv-verilog.pvl  UART.v*
+tux-167:~/ece551/designvision/dv_tutorial$ pwd
+/filespace/a/ahazra2/ece551/designvision/dv_tutorial
+tux-167:~/ece551/designvision/dv_tutorial$ cd ../../
+tux-167:~/ece551$ ls
+designvision/  Exercise17/
+tux-167:~/ece551$ cd Exercise17/
+tux-167:~/ece551/Exercise17$ ls
+command.log  filenames.log  UART.dc  UART_rx.sv*  UART_tx.sv*  UART.v*
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> source UART.dc
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db'
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART.v
+
+Statistics for case statements in always block at line 79 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            88            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_tx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 57 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 68 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 94 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_rx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 60 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 67 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 79 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 3 designs.
+Current design is 'UART_tx'.
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'UART'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'UART' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'UART_rx'
+  Mapping 'UART_rx'
+  Structuring 'UART_tx'
+  Mapping 'UART_tx'
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     787.8      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_rx'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     921.5      0.00       0.0      17.6
+    0:00:01     921.5      0.00       0.0      17.6
+    0:00:01     921.5      0.00       0.0      17.6
+    0:00:01     921.5      0.00       0.0      17.6
+    0:00:01     921.5      0.00       0.0      17.6
+    0:00:01     832.1      0.00       0.0       0.0
+    0:00:01     827.0      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     826.7      0.00       0.0       0.0
+    0:00:01     783.5      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     783.5      0.00       0.0       0.0
+    0:00:01     783.5      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating graph... (UID-83)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     779.5      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     742.9      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     742.9      0.00       0.0       0.0
+    0:00:00     742.9      0.00       0.0       0.0
+    0:00:00     725.1      0.00       0.0       0.0
+    0:00:00     720.0      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+dc_shell>
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$ ls
+area.rpt       max_delay.rpt  UART_RX.mr           UART_TX.mr           UART.v*
+command.log    min_delay.rpt  UART_rx.sv*          UART_tx.sv*          UART-verilog.pvl
+default.svf    UART.dc        UART_rx-verilog.pvl  UART_tx-verilog.pvl  UART-verilog.syn
+filenames.log  UART.mr        UART_rx-verilog.syn  UART_tx-verilog.syn
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> source UART.dc
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db'
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART.v
+
+Statistics for case statements in always block at line 79 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            88            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_tx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 57 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 68 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 94 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_rx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 60 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 67 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 79 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 3 designs.
+Current design is 'UART_tx'.
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'UART'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'UART' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'UART_rx'
+  Mapping 'UART_rx'
+  Structuring 'UART_tx'
+  Mapping 'UART_tx'
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     832.6      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.0      0.00       0.0      10.6
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     827.2      0.00       0.0       0.0
+    0:00:01     787.8      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+    0:00:01     785.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_rx'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     832.1      0.00       0.0       0.0
+    0:00:00     827.0      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:01     783.5      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     783.5      0.00       0.0       0.0
+    0:00:01     783.5      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+    0:00:01     782.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating graph... (UID-83)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     779.5      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     742.9      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     742.9      0.00       0.0       0.0
+    0:00:00     742.9      0.00       0.0       0.0
+    0:00:00     725.1      0.00       0.0       0.0
+    0:00:00     720.0      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+    0:00:00     717.2      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+dc_shell> report_area > UART_area.txt
+dc_shell> report_vg > UART.vg
+Error: unknown command 'report_vg' (CMD-005)
+dc_shell>repot_gatelist > UART.vg
+
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$ ls
+area.rpt       max_delay.rpt  UART.mr              UART_rx-verilog.syn  UART_tx-verilog.syn
+command.log    min_delay.rpt  UART_RX.mr           UART_TX.mr           UART.v*
+default.svf    UART_area.txt  UART_rx.sv*          UART_tx.sv*          UART-verilog.pvl
+filenames.log  UART.dc        UART_rx-verilog.pvl  UART_tx-verilog.pvl  UART-verilog.syn
+tux-167:~/ece551/Exercise17$ cat UART_area.txt
+
+****************************************
+Report : area
+Design : UART
+Version: S-2021.06
+Date   : Wed Nov  3 10:42:33 2021
+****************************************
+
+Library(s) Used:
+
+    saed32lvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db)
+
+Number of ports:                           24
+Number of nets:                           250
+Number of cells:                          202
+Number of combinational cells:            146
+Number of sequential cells:                56
+Number of macros/black boxes:               0
+Number of buf/inv:                         22
+Number of references:                      21
+
+Combinational area:                323.271170
+Buf/Inv area:                       28.972416
+Noncombinational area:             393.923208
+Macro/Black Box area:                0.000000
+Net Interconnect area:             172.861385
+
+Total cell area:                   717.194378
+Total area:                        890.055762
+1
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> write -format verilog UART -output UART.vg
+Error: extra positional -format' (CMD-012)
+Error: extra positional option 'verilog' (CMD-012)
+Error: extra positional option 'UART' (CMD-012)
+dc_shell> write verilog UART -output UART.vg
+
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> write -format verilog UART -output UART.vg
+Error: extsiurositional option 'verilog' (CMD-012)
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> source UART.v
+Error: could not open script file "UART.v" (CMD-015)
+dc_shell>
+Information: Interrupting current command. (INT-2)
+Information: One more interrupt will exit process. (INT-3)
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$ ls
+area.rpt       max_delay.rpt  UART.mr              UART_rx-verilog.syn  UART_tx-verilog.syn
+command.log    min_delay.rpt  UART_RX.mr           UART_TX.mr           UART.v*
+default.svf    UART_area.txt  UART_rx.sv*          UART_tx.sv*          UART-verilog.pvl
+filenames.log  UART.dc        UART_rx-verilog.pvl  UART_tx-verilog.pvl  UART-verilog.syn
+tux-167:~/ece551/Exercise17$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version S-2021.06 for linux64 - Jun 17, 2021
+
+                    Copyright (c) 1988 - 2021 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> source UART.dc
+Error: could not open script file "UART.dc" (CMD-015)
+dc_shell> ls
+.                 UART.v               UART_rx.sv           default.svf
+..                UART_RX.mr           UART_tx-verilog.pvl  filenames.log
+UART-verilog.pvl  UART_TX.mr           UART_tx-verilog.syn  max_delay.rpt
+UART-verilog.syn  UART_area.txt        UART_tx.sv           min_delay.rpt
+UART.dc           UART_rx-verilog.pvl  area.rpt
+UART.mr           UART_rx-verilog.syn  command.log
+dc_shell> ls
+.                 UART.v               UART_rx.sv           default.svf
+..                UART_RX.mr           UART_tx-verilog.pvl  filenames.log
+UART-verilog.pvl  UART_TX.mr           UART_tx-verilog.syn  max_delay.rpt
+UART-verilog.syn  UART_area.txt        UART_tx.sv           min_delay.rpt
+UART.dc           UART_rx-verilog.pvl  area.rpt
+UART.mr           UART_rx-verilog.syn  command.log
+dc_shell> source UART.dc
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db'
+Loading db file '/cae/apps/data/saed32_edk-2018/lib/io_std/db_nldm/saed32io_wb_tt1p05v25c_2p5v.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2021/syn/S-2021.06/libraries/syn/standard.sldb'
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv
+Compiling source file /filespace/a/ahazra2/ece551/Exercise17/UART.v
+
+Statistics for case statements in always block at line 79 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            88            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_tx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 57 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 68 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Statistics for case statements in always block at line 94 in file
+        '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           104            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_rx line 26 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 35 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 46 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |   7   |  Y  | N  | Y  | N  | N  | N  | N  |
+|    baud_cnt_reg     | Flip-flop |   5   |  Y  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 60 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    shift_reg_reg    | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 67 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 79 in file
+                '/filespace/a/ahazra2/ece551/Exercise17/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|     rx_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 3 designs.
+Current design is 'UART_tx'.
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'UART'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | S-2021.06-DWBB_202106.0 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+Information: Design 'UART' has no optimization constraints set. (OPT-108)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'UART_rx'
+  Mapping 'UART_rx'
+  Structuring 'UART_tx'
+  Mapping 'UART_tx'
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     832.6      0.00       0.0      10.6
+    0:00:02     832.6      0.00       0.0      10.6
+    0:00:02     832.6      0.00       0.0      10.6
+    0:00:02     832.6      0.00       0.0      10.6
+    0:00:02     832.6      0.00       0.0      10.6
+    0:00:02     827.0      0.00       0.0      10.6
+    0:00:02     827.0      0.00       0.0      10.6
+    0:00:02     827.0      0.00       0.0      10.6
+    0:00:02     827.0      0.00       0.0      10.6
+    0:00:02     827.0      0.00       0.0      10.6
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     827.2      0.00       0.0       0.0
+    0:00:02     787.8      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+    0:00:02     785.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+Warning: Design rule attributes from the driving cell will be
+        set on the port. (UID-401)
+
+Information: There are 4 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx_DW01_incdec_0'
+  Processing 'UART_rx'
+  Processing 'UART_tx_DW01_incdec_0_DW01_incdec_1'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     921.5      0.00       0.0      17.6
+    0:00:00     832.1      0.00       0.0       0.0
+    0:00:00     827.0      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     826.7      0.00       0.0       0.0
+    0:00:00     783.5      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     783.5      0.00       0.0       0.0
+    0:00:00     783.5      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+    0:00:00     782.3      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Information: Updating graph... (UID-83)
+
+Information: There are 2 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT-998)
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     858.8      0.00       0.0      17.6
+    0:00:00     779.5      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:00     775.9      0.00       0.0       0.0
+    0:00:01     742.9      0.00       0.0       0.0
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     742.9      0.00       0.0       0.0
+    0:00:01     742.9      0.00       0.0       0.0
+    0:00:01     725.1      0.00       0.0       0.0
+    0:00:01     720.0      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+    0:00:01     717.2      0.00       0.0       0.0
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+Warning: Design has no hierarchy.  No cells can be ungrouped. (UID-228)
+0
+dc_shell> write -format verilog UART -output UART.vg
+Writing verilog file '/filespace/a/ahazra2/ece551/Exercise17/UART.vg'.
+1
+dc_shell> ls
+.                 UART.v               UART_rx-verilog.syn  command.log
+..                UART.vg              UART_rx.sv           default.svf
+UART-verilog.pvl  UART_RX.mr           UART_tx-verilog.pvl  filenames.log
+UART-verilog.syn  UART_TX.mr           UART_tx-verilog.syn  max_delay.rpt
+UART.dc           UART_area.txt        UART_tx.sv           min_delay.rpt
+UART.mr           UART_rx-verilog.pvl  area.rpt
+dc_shell>
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+Information: Process terminated by interrupt. (INT-4)
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$
+tux-167:~/ece551/Exercise17$ ls
+area.rpt       max_delay.rpt  UART.mr              UART_rx-verilog.syn  UART_tx-verilog.syn  UART.vg
+command.log    min_delay.rpt  UART_RX.mr           UART_TX.mr           UART.v*
+default.svf    UART_area.txt  UART_rx.sv*          UART_tx.sv*          UART-verilog.pvl
+filenames.log  UART.dc        UART_rx-verilog.pvl  UART_tx-verilog.pvl  UART-verilog.syn
+tux-167:~/ece551/Exercise17$ vi UART.vg
+tux-167:~/ece551/Exercise17$ vi UART.vg
+  1 /////////////////////////////////////////////////////////////
+  2 // Created by: Synopsys DC Expert(TM) in wire load mode
+  3 // Version   : S-2021.06
+  4 // Date      : Wed Nov  3 10:53:19 2021
+  5 /////////////////////////////////////////////////////////////
+  6
+  7
+  8 module UART ( clk, rst_n, RX, TX, rx_rdy, clr_rx_rdy, rx_data, trmt, tx_data,
+  9         tx_done );
+ 10   output [7:0] rx_data;
+ 11   input [7:0] tx_data;
+ 12   input clk, rst_n, RX, clr_rx_rdy, trmt;
+ 13   output TX, rx_rdy, tx_done;
+ 14   wire   \iTX/n99 , \iTX/n98 , \iTX/n97 , \iTX/n96 , \iTX/n95 , \iTX/n93 ,
+ 15          \iTX/n88 , \iTX/n70 , \iTX/n69 , \iTX/n67 , \iTX/n64 , \iTX/n63 ,
+ 16          \iTX/n62 , \iTX/n61 , \iTX/n60 , \iTX/n59 , \iTX/n56 , \iTX/n55 ,
+ 17          \iTX/n54 , \iTX/n53 , \iTX/n52 , \iTX/n51 , \iTX/n50 , \iTX/n49 ,
+ 18          \iTX/n48 , \iTX/n47 , \iTX/n46 , \iTX/n45 , \iTX/n44 , \iTX/n43 ,
+ 19          \iTX/n42 , \iTX/n41 , \iTX/n40 , \iTX/n39 , \iTX/n38 , \iTX/n37 ,
+ 20          \iTX/n36 , \iTX/n35 , \iTX/n34 , \iTX/n33 , \iTX/n32 , \iTX/n31 ,
+ 21          \iTX/nxt_state , \iRX/n99 , \iRX/n98 , \iRX/n97 , \iRX/n95 ,
+ 22          \iRX/n86 , \iRX/n85 , \iRX/n84 , \iRX/n83 , \iRX/n82 , \iRX/n81 ,
+ 23          \iRX/n80 , \iRX/n79 , \iRX/n78 , \iRX/n77 , \iRX/n76 , \iRX/n75 ,
+ 24          \iRX/n74 , \iRX/n73 , \iRX/n72 , \iRX/n71 , \iRX/n70 , \iRX/n69 ,
+ 25          \iRX/n64 , \iRX/n63 , \iRX/n62 , \iRX/n61 , \iRX/n60 , \iRX/n59 ,
+ 26          \iRX/n58 , \iRX/n57 , \iRX/n56 , \iRX/n54 , \iRX/n53 , \iRX/n51 ,
+ 27          \iRX/n50 , \iRX/n49 , \iRX/n48 , \iRX/n47 , \iRX/n46 , \iRX/n45 ,
+ 28          \iRX/n44 , \iRX/n43 , \iRX/n42 , \iRX/rx_ff1 , \iRX/nxt_state ,
+ 29          \iRX/state , n3, n4, n5, n6, n7, n8, n17, n19, n20, n21, n22, n23,
+ 30          n25, n26, n29, n30, n31, n32, n33, n34, n35, n36, n37, n38, n39, n40,
+ 31          n41, n42, n43, n44, n45, n47, n49, n50, n51, n53, n55, n56, n57, n58,
+ 32          n59, n60, n61, n62, n63, n64, n65, n66, n67, n68, n69, n70, n71, n72,
+ 33          n73, n74, n75, n76, n77, n78, n79, n80, n81, n82, n83, n84, n85, n86,
+ 34          n87, n88, n89, n90, n91, n92, n93, n94, n95, n96, n97, n98, n99, n100,
+ 35          n101, n102, n103, n104, n105, n106, n107, n108, n109, n110, n111,
+ 36          n112, n113, n114, n115, n116, n117, n118, n119, n120, n121, n122,
+ 37          n123, n124, n125, n126, n127, n128, n129, n130, n131, n132, n141,
+ 38          n142, n143, n144, n145, n146, n147, n148, n149, n150, n151, n152,
+ 39          n153, n154, n155, n156, n157, n158, n159, n160, n161, n162, n163;
+ 40
+ 41   DFFARX1_LVT \iTX/tx_done_reg  ( .D(\iTX/n31 ), .CLK(clk), .RSTB(n162), .Q(
+-- VISUAL --                                                                          343       1,1           Top
