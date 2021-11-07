@@ -1,0 +1,26 @@
+///////////////////////////////////////////////////
+// FA.sv  This design will take in 3 bits       //
+// and add them to produce a sum and carry out //
+////////////////////////////////////////////////
+module FA(
+  input 	A,B,Cin,	// three input bits to be added
+  output	S,Cout		// Sum and carry out
+);
+
+	/////////////////////////////////////////////////
+	// Declare any internal signals as type logic //
+	///////////////////////////////////////////////
+	
+logic a_and_b,a_and_cin,b_and_cin;	// internal signals declared as logic
+	
+	/////////////////////////////////////////////////
+	// Implement Full Adder as structural verilog //
+	///////////////////////////////////////////////
+
+xor xor0(C,A,B,Cin); 			// compute sum as xor of A,B,Cin
+  and and0(a_and_b,A,B); 		// A and B
+  and and1(a_and_cin,A,Cin); 		// A and Cin
+  and and2(b_and_cin,B,Cin); 		// B and Cin
+  or or0(Cout,a_and_b,a_and_cin,b_and_cin);// a_and_b or a_and_cin or b_and_cin
+	
+endmodule // FA

@@ -1,0 +1,167 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vFA
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1600374185
+!i10b 1
+!s100 `c3o0V8_>N07T=A=ocCeA1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@AMd0oPiHJ@e[MPIEo6fO2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files
+w1600373911
+8C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW1\AHW1_Files\FA.sv
+FC:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW1\AHW1_Files\FA.sv
+!i122 20
+Z4 L0 5 23
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1600374185.000000
+!s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW1\AHW1_Files\FA.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW1\AHW1_Files\FA.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@f@a
+vFA_tb
+R0
+!s110 1600374188
+!i10b 1
+!s100 fEDkL54h02]R_nN;a^?hf0
+R1
+IoKhRN<@nKICJU@o;7IOUe3
+R2
+S1
+R3
+w1565340910
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv
+!i122 21
+L0 1 38
+R5
+r1
+!s85 0
+31
+!s108 1600374188.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv|
+!i113 1
+R6
+R7
+n@f@a_tb
+vRCA16
+R0
+!s110 1600376384
+!i10b 1
+!s100 Xm]8`LffoHO@9ZT:lnDY_0
+R1
+I3gNb6keXbVW[f1J2PzkH;0
+R2
+S1
+R3
+w1600376291
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv
+!i122 24
+R4
+R5
+r1
+!s85 0
+31
+!s108 1600376384.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv|
+!i113 1
+R6
+R7
+n@r@c@a16
+vRCA16_tb
+R0
+!s110 1600376716
+!i10b 1
+!s100 U`J]Na1Sm:U:L9gMd2^Y50
+R1
+Io_dk]bRl^0fRR0;VbD]cj3
+R2
+S1
+R3
+w1597067070
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv
+!i122 26
+L0 1 41
+R5
+r1
+!s85 0
+31
+!s108 1600376716.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv|
+!i113 1
+R6
+R7
+n@r@c@a16_tb
+vRCA4
+R0
+!s110 1600376723
+!i10b 1
+!s100 3N:IL=g?U>hekn0h_R3>42
+R1
+I]iPYn]V9FWZ;hS462QSeX3
+R2
+S1
+R3
+w1600375037
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv
+!i122 27
+L0 5 24
+R5
+r1
+!s85 0
+31
+!s108 1600376723.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv|
+!i113 1
+R6
+R7
+n@r@c@a4
+vRCA4_tb
+R0
+!s110 1600376725
+!i10b 1
+!s100 WUII67c58VncEClaN0Chf3
+R1
+Ibl4Ndm]2zT=f0<0Sg<Ncj3
+R2
+S1
+R3
+w1565348864
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv
+!i122 28
+L0 1 33
+R5
+r1
+!s85 0
+31
+!s108 1600376725.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv|
+!i113 1
+R6
+R7
+n@r@c@a4_tb

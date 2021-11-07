@@ -1,0 +1,701 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/WHW8/microwave_SM
+vA2D
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1606999626
+!i10b 1
+!s100 S4iRWC1cEEGJ^MTG[mUU31
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I@Q]ZazPN1gSBR`E8ehj_B0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files
+w1606999609
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/A2D.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/A2D.sv
+!i122 39
+L0 1 85
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1606999626.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/A2D.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/A2D.sv|
+!i113 1
+Z5 o-work work -sv
+Z6 tCvgOpt 0
+n@a2@d
+vd_en_ff
+R0
+!s110 1606911387
+!i10b 1
+!s100 3QRe_kSD32AQoSb7g_zz30
+R1
+IECSZ@OC;?>o[7j=aPB;;G1
+R2
+S1
+R3
+w1605090521
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff.sv
+!i122 27
+L0 1 36
+R4
+r1
+!s85 0
+31
+!s108 1606911387.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff.sv|
+!i113 1
+R5
+R6
+vd_en_ff_tb
+R0
+Z7 !s110 1606909013
+!i10b 1
+!s100 8I>oh5NJVZJTFO;7V4:5]2
+R1
+Iem3>277S1O@9T]N?:;J_X0
+R2
+S1
+R3
+w1597567390
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff_tb.sv
+!i122 12
+L0 1 79
+R4
+r1
+!s85 0
+31
+Z8 !s108 1606909013.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_en_ff_tb.sv|
+!i113 1
+R5
+R6
+vd_ff
+R0
+Z9 !s110 1606909012
+!i10b 1
+!s100 Q<S;[fK>:IDMlTgjN1^i>0
+R1
+IOW:SLCXOzi24[OM4UgHP:1
+R2
+S1
+R3
+w1597319720
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_ff.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_ff.sv
+!i122 7
+L0 1 17
+R4
+r1
+!s85 0
+31
+Z10 !s108 1606909012.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_ff.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/d_ff.sv|
+!i113 1
+R5
+R6
+vdatapath
+R0
+R7
+!i10b 1
+!s100 d=f6<Gi9i7:Mo20cnzR072
+R1
+Iz]a`S?YL^Mo:nb``D9JWC3
+R2
+S1
+R3
+w1603289372
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/datapath.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/datapath.sv
+!i122 13
+Z11 L0 1 59
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/datapath.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/datapath.sv|
+!i113 1
+R5
+R6
+ven_reg16
+R0
+R7
+!i10b 1
+!s100 LJjdL@cM@:d_GZcTOaTZ`2
+R1
+ILI5lanWiD376;C4dMkbAh2
+R2
+S1
+R3
+w1603288941
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg16.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg16.sv
+!i122 15
+Z12 L0 1 13
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg16.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg16.sv|
+!i113 1
+R5
+R6
+ven_reg8
+R0
+R7
+!i10b 1
+!s100 OJ@;a<N@J:TW<JAVkDAdz1
+R1
+I=Kz<Jj3:aMbEkMKFFdfV02
+R2
+S1
+R3
+w1603286169
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg8.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg8.sv
+!i122 14
+R12
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg8.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/en_reg8.sv|
+!i113 1
+R5
+R6
+vFA
+R0
+R7
+!i10b 1
+!s100 `c3o0V8_>N07T=A=ocCeA1
+R1
+I8UJFL^24Y01U1zFnAhKQQ3
+R2
+S1
+R3
+w1600373911
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/FA.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/FA.sv
+!i122 16
+Z13 L0 5 23
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/FA.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/FA.sv|
+!i113 1
+R5
+R6
+n@f@a
+vmanchester_RX
+R0
+R9
+!i10b 1
+!s100 8O[;eEO3?Gb>oPdg5eWGE0
+R1
+IJEoM7o[<GfKBJcz=kGoec0
+R2
+S1
+R3
+Z14 w1597302614
+Z15 8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial8.sv
+Z16 FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial8.sv
+!i122 11
+L0 27 154
+R4
+r1
+!s85 0
+31
+R10
+Z17 !s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial8.sv|
+Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial8.sv|
+!i113 1
+R5
+R6
+nmanchester_@r@x
+vmanchester_TX
+R0
+R9
+!i10b 1
+!s100 _FkZ0PG?F5D`C8cIeAP=G1
+R1
+IdPXWC?>dkIRSdnLCI94NC2
+R2
+S1
+R3
+R14
+R15
+R16
+!i122 11
+L0 182 167
+R4
+r1
+!s85 0
+31
+R10
+R17
+R18
+!i113 1
+R5
+R6
+nmanchester_@t@x
+vmstr_rcv_SM
+R0
+R9
+!i10b 1
+!s100 PD2ETA9Qg^`LE?P@;<WU32
+R1
+I1?8;azInKCJS=KNNf`W=O1
+R2
+S1
+R3
+Z19 w1597321284
+Z20 8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_mstr.sv
+Z21 FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_mstr.sv
+!i122 10
+L0 122 51
+R4
+r1
+!s85 0
+31
+R10
+Z22 !s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_mstr.sv|
+Z23 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_mstr.sv|
+!i113 1
+R5
+R6
+nmstr_rcv_@s@m
+vmstr_tx_SM
+R0
+R9
+!i10b 1
+!s100 @cFQ?RhKa8>T>nFB@;Q[Q2
+R1
+Ioi_eEhZaM80;B>nAMn5fJ0
+R2
+S1
+R3
+R19
+R20
+R21
+!i122 10
+L0 65 55
+R4
+r1
+!s85 0
+31
+R10
+R22
+R23
+!i113 1
+R5
+R6
+nmstr_tx_@s@m
+vNV_MEM
+R0
+R9
+!i10b 1
+!s100 7e:2iiGz7h`b[NbY068d72
+R1
+IlgkR1mjOAi;Lh=`dPPZbe0
+R2
+S1
+R3
+Z24 w1597561962
+Z25 8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC.sv
+Z26 FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC.sv
+!i122 8
+L0 63 26
+R4
+r1
+!s85 0
+31
+R10
+Z27 !s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC.sv|
+Z28 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC.sv|
+!i113 1
+R5
+R6
+n@n@v_@m@e@m
+vPSIC
+R0
+R9
+!i10b 1
+!s100 M_02C7ORZPI38`oXPPXS:1
+R1
+IU4^5`IIkQ1CIil<e098cD1
+R2
+S1
+R3
+R24
+R25
+R26
+!i122 8
+Z29 L0 1 58
+R4
+r1
+!s85 0
+31
+R10
+R27
+R28
+!i113 1
+R5
+R6
+n@p@s@i@c
+vPSIC_cntrl
+R0
+!s110 1607022211
+!i10b 1
+!s100 [HNl7l;bRD@4o@Nz84cCc3
+R1
+IL=e74EdBdP7oMW2@jB9cM3
+R2
+S1
+R3
+w1607022168
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_cntrl.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_cntrl.sv
+!i122 42
+L0 1 121
+R4
+r1
+!s85 0
+31
+!s108 1607022210.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_cntrl.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_cntrl.sv|
+!i113 1
+R5
+R6
+n@p@s@i@c_cntrl
+vPSIC_tb
+R0
+!s110 1607062529
+!i10b 1
+!s100 YePG@0Jo=_z[m^ne4^8Uf3
+R1
+Ijbc0dbe33m^j[W^IgA:=51
+R2
+S1
+R3
+w1607022074
+8C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\PSIC_tb.sv
+FC:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\PSIC_tb.sv
+!i122 45
+L0 1 260
+R4
+r1
+!s85 0
+31
+!s108 1607062529.000000
+!s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\PSIC_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\PSIC_tb.sv|
+!i113 1
+R5
+R6
+n@p@s@i@c_tb
+vRCA16
+R0
+R7
+!i10b 1
+!s100 Xm]8`LffoHO@9ZT:lnDY_0
+R1
+In>K^DS9ii@bb]8zkOCmOP3
+R2
+S1
+R3
+w1600376291
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/RCA16.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/RCA16.sv
+!i122 17
+R13
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/RCA16.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/RCA16.sv|
+!i113 1
+R5
+R6
+n@r@c@a16
+vrcv_SM
+R0
+Z30 !s110 1606909014
+!i10b 1
+!s100 EC@Qho8lP6izjzMWj5AlH3
+R1
+ILS>Tz[OcO75UY><NT=Yzm0
+R2
+S1
+R3
+w1604840496
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/rcv_SM.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/rcv_SM.sv
+!i122 18
+L0 1 62
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/rcv_SM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/rcv_SM.sv|
+!i113 1
+R5
+R6
+nrcv_@s@m
+vsatAdd
+R0
+R30
+!i10b 1
+!s100 ^oW7@c]D0O0^@;NaHONjc1
+R1
+IkKmYY=9>N^Y64lBm`Tj`M2
+R2
+S1
+R3
+w1601499150
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satAdd.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satAdd.sv
+!i122 19
+L0 7 51
+R4
+r1
+!s85 0
+31
+Z31 !s108 1606909014.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satAdd.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satAdd.sv|
+!i113 1
+R5
+R6
+nsat@add
+vsatMult
+R0
+R30
+!i10b 1
+!s100 DcT5PGzGn;m`;n4QQmQST0
+R1
+IE]2C]ff8CbF;NeF9o>eTJ1
+R2
+S1
+R3
+w1601549283
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satMult.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satMult.sv
+!i122 20
+L0 5 55
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satMult.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/satMult.sv|
+!i113 1
+R5
+R6
+nsat@mult
+vserial8
+R0
+R9
+!i10b 1
+!s100 <7=IGO?2VQ3a8WPRjVRLf3
+R1
+IU4]H@KgPD6Xoi4DHzXkWm2
+R2
+S1
+R3
+R14
+R15
+R16
+!i122 11
+L0 1 25
+R4
+r1
+!s85 0
+31
+R10
+R17
+R18
+!i113 1
+R5
+R6
+vserial_comm
+R0
+R30
+!i10b 1
+!s100 hDlI4BEolWO;^l[KQVJYn2
+R1
+I>gR`LaMTZKlPnS2BTDFLT0
+R2
+S1
+R3
+w1605092131
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_comm.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_comm.sv
+!i122 21
+L0 1 68
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_comm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/serial_comm.sv|
+!i113 1
+R5
+R6
+vserial_mstr
+R0
+R9
+!i10b 1
+!s100 f57;En<Y3V6ONz=EU6Och1
+R1
+IVi6elnU408ziZAL<h<<3h1
+R2
+S1
+R3
+R19
+R20
+R21
+!i122 10
+R11
+R4
+r1
+!s85 0
+31
+R10
+R22
+R23
+!i113 1
+R5
+R6
+vstate2_reg
+R0
+!s110 1606911324
+!i10b 1
+!s100 eQ0h@lS<AkSd5QiKUdeJ82
+R1
+I0W[CV99ADoj;Wea42;e6U2
+R2
+S1
+R3
+w1606911318
+8C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\state2_reg.sv
+FC:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\state2_reg.sv
+!i122 26
+Z32 L0 5 36
+R4
+r1
+!s85 0
+31
+!s108 1606911324.000000
+!s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\state2_reg.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW5\AHW5_Files\state2_reg.sv|
+!i113 1
+R5
+R6
+vstate3_reg
+R0
+R30
+!i10b 1
+!s100 dVicW5302@GSmaiX^Y@240
+R1
+IZolW5FTK@d98HVSn9ocUQ0
+R2
+S1
+R3
+w1603174299
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state3_reg.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state3_reg.sv
+!i122 23
+R32
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state3_reg.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state3_reg.sv|
+!i113 1
+R5
+R6
+vstate6_reg
+R0
+!s110 1606911450
+!i10b 1
+!s100 6VKT5dIV[IfldCgoU0mB<1
+R1
+IkY5cF61_IinGbB9na>F_G0
+R2
+S1
+R3
+w1603173401
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state6_reg.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state6_reg.sv
+!i122 28
+R32
+R4
+r1
+!s85 0
+31
+!s108 1606911450.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state6_reg.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/state6_reg.sv|
+!i113 1
+R5
+R6
+vtx_SM
+R0
+R30
+!i10b 1
+!s100 >Z2ZRc>03;<X14FM]<Wk@3
+R1
+I<oifK2HTX4DM_oo=JfmG<3
+R2
+S1
+R3
+w1604830697
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/tx_SM.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/tx_SM.sv
+!i122 24
+R29
+R4
+r1
+!s85 0
+31
+R31
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/tx_SM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/tx_SM.sv|
+!i113 1
+R5
+R6
+ntx_@s@m

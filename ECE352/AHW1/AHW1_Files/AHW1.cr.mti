@@ -1,0 +1,43 @@
+{C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RCA4_tb
+
+Top level modules:
+	RCA4_tb
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA.sv} {1 {vlog -work work -sv -stats=none {C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW1\AHW1_Files\FA.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FA
+
+Top level modules:
+	FA
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/FA_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module FA_tb
+
+Top level modules:
+	FA_tb
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RCA16
+
+Top level modules:
+	RCA16
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA16_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RCA16_tb
+
+Top level modules:
+	RCA16_tb
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files/RCA4.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RCA4
+
+Top level modules:
+	RCA4
+
+} {} {}}

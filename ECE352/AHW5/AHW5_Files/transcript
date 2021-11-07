@@ -1,0 +1,46 @@
+# Compile of PSIC_tb.sv was successful.
+vsim -gui work.PSIC_tb
+# vsim -gui work.PSIC_tb 
+# Start time: 10:15:37 on Dec 04,2020
+# Loading sv_std.std
+# Loading work.PSIC_tb
+# Loading work.PSIC
+# Loading work.NV_MEM
+# Loading work.A2D
+# Loading work.datapath
+# Loading work.en_reg16
+# Loading work.satAdd
+# Loading work.RCA16
+# Loading work.satMult
+# Loading work.PSIC_cntrl
+# Loading work.state6_reg
+# Loading work.serial_comm
+# Loading work.serial8
+# Loading work.manchester_TX
+# Loading work.manchester_RX
+# Loading work.rcv_SM
+# Loading work.state3_reg
+# Loading work.tx_SM
+# Loading work.state2_reg
+# Loading work.serial_mstr
+# Loading work.en_reg8
+# Loading work.mstr_rcv_SM
+# Loading work.mstr_tx_SM
+# Loading work.d_en_ff
+# Loading work.d_ff
+# Loading work.FA
+add wave -position insertpoint sim:/PSIC_tb/iDUT/*
+run -all
+# GOOD: Test1 passed, write to NV_MEM gave response
+# GOOD: Test2 passed, raw mode reading worked
+# GOOD: Test3 passed, 1.25 Gain worked
+# GOOD: Test4 passed, offset worked
+# GOOD: Test5 passed
+# GOOD: Test6 passed
+# GOOD: Test7 passed
+# YAHOO!! all tests passed!
+# ** Note: $stop    : C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_tb.sv(254)
+#    Time: 710900 ps  Iteration: 1  Instance: /PSIC_tb
+# Break in Module PSIC_tb at C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW5/AHW5_Files/PSIC_tb.sv line 254
+# End time: 10:15:53 on Dec 04,2020, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 2

@@ -1,0 +1,167 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW1/AHW1_Files
+vFA
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1601449522
+!i10b 1
+!s100 `c3o0V8_>N07T=A=ocCeA1
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IE3mChg:M4<Nge`5f>WS^U0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files
+w1600373911
+8C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\FA.sv
+FC:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\FA.sv
+!i122 2
+Z4 L0 5 23
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1601449522.000000
+!s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\FA.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\FA.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+n@f@a
+vRCA16
+R0
+!s110 1601477619
+!i10b 1
+!s100 Xm]8`LffoHO@9ZT:lnDY_0
+R1
+IAUkYN`lC=04[o52ccUA0]0
+R2
+S1
+R3
+w1600376291
+8C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\RCA16.sv
+FC:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\RCA16.sv
+!i122 15
+R4
+R5
+r1
+!s85 0
+31
+!s108 1601477619.000000
+!s107 C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\RCA16.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\Users\Ayan Deep Hazra\Desktop\Semesters\xFALL 2020\ECE352\AHW2\AHW2_Files\RCA16.sv|
+!i113 1
+R6
+R7
+n@r@c@a16
+vsatAdd
+R0
+!s110 1601546134
+!i10b 1
+!s100 ^oW7@c]D0O0^@;NaHONjc1
+R1
+IcO`oBiP80858lIzGO7Qzl2
+R2
+S1
+R3
+w1601499150
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd.sv
+!i122 25
+L0 7 51
+R5
+r1
+!s85 0
+31
+!s108 1601546133.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd.sv|
+!i113 1
+R6
+R7
+nsat@add
+vsatAdd_tb
+R0
+!s110 1601449547
+!i10b 1
+!s100 j0Ez@_=K6b5NnUgeI2YYQ0
+R1
+IS<A92<5z`0b6_>nk0F?DJ2
+R2
+S1
+R3
+w1597153706
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd_tb.sv
+!i122 4
+L0 1 71
+R5
+r1
+!s85 0
+31
+!s108 1601449547.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satAdd_tb.sv|
+!i113 1
+R6
+R7
+nsat@add_tb
+vsatMult
+R0
+!s110 1601549299
+!i10b 1
+!s100 DcT5PGzGn;m`;n4QQmQST0
+R1
+I55EhN^2e=X:bXIeFV9K0]2
+R2
+S1
+R3
+w1601549283
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult.sv
+!i122 31
+L0 5 55
+R5
+r1
+!s85 0
+31
+!s108 1601549299.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult.sv|
+!i113 1
+R6
+R7
+nsat@mult
+vsatMult_tb
+R0
+!s110 1601546177
+!i10b 1
+!s100 :bzD=R65>Z>]W^[f^SXnR3
+R1
+If5n@ez70<93`ZLnR[zY@B3
+R2
+S1
+R3
+w1597217742
+8C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult_tb.sv
+FC:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult_tb.sv
+!i122 27
+L0 1 102
+R5
+r1
+!s85 0
+31
+!s108 1601546177.000000
+!s107 C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/Ayan Deep Hazra/Desktop/Semesters/xFALL 2020/ECE352/AHW2/AHW2_Files/satMult_tb.sv|
+!i113 1
+R6
+R7
+nsat@mult_tb

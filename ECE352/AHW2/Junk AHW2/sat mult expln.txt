@@ -1,0 +1,13 @@
+You know the full 32-bit product (Prod[31:0]) is valid and cannot have overflowed because it was formed by multiplying two 16-bit numbers. So it is the gold standard, but we don't want to use 32-bits in our downstream logic.
+
+1.) If bit 31 is 0 the product is positive.     
+a.) If bit 30 is set then the result is more positive than you can represent using [29:14]   
+b.) You also know if bit 29 is set then results is also more positive than you can represent using [29:14] because bit 29 is now the MSB of your result, and if it was set then your result would be interpreted as negative, but you know the full correct product to be positive.  So in this case and case a above you need to saturate to the most positive number possible for a 16-bit value.   
+c.) If neither a or b above are true the number is in range and you can use bits [29:14] straight away.
+
+
+2.)  If bit 31 is 1 the product is negative. 
+a.) If bit 30 is 0 than the result is more negative than you can represent using [29:14] 
+b.)  If bit 29 is 0 the result is also more negative than you can represent using [29:14] because bit 29 is now the MSB of your result, and if it was clear then your result would be interpreted as positive, but you know the full correct product to be negative.  So in this case, and case a above you need to saturate to the most negative number possible for a 16-bit value. 
+c.) If neither a or b above are true the number is in range and you can use bits [29:14] straight away.
+
