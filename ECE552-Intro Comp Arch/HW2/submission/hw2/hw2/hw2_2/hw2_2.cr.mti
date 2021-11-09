@@ -1,0 +1,64 @@
+/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/cla_4.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/cla_4.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cla_4
+
+Top level modules:
+	cla_4
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/mux_2_1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/mux_2_1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux_2_1
+
+Top level modules:
+	mux_2_1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu_hier_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu_hier_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module alu_hier_bench
+
+Top level modules:
+	alu_hier_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/mux_4_1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/mux_4_1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux_4_1
+
+Top level modules:
+	mux_4_1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/shifter.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/shifter.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu_hier.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module alu_hier
+
+Top level modules:
+	alu_hier
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/cla_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/cla_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cla_16
+
+Top level modules:
+	cla_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw2/hw2_2/alu.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}}

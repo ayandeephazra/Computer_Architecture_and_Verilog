@@ -1,0 +1,11 @@
+Line 20: Bad keyword integer
+Line 49: Bad keyword initial
+Line 50: begin without always/case
+Line 66: Bad keyword posedge
+Line 88: Bad keyword if
+Line 101: Bad keyword if
+Line 108: Bad keyword if
+Line 109: Bad keyword if
+Line 112: Bad keyword else
+Line 66: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf_bench.v. Hash = 1040903485

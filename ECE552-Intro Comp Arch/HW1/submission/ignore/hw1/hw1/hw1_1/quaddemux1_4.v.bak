@@ -1,0 +1,9 @@
+module quaddemux1_4(Inp, S, OutA, OutB, OutC, OutD);
+
+input [2:0] Inp;
+input [1:0] S;
+output [2:0] OutA, OutB, OutC, OutD;
+
+quaddemux1_4 iDEMUX1_4[2:0] (.Inp(Inp), .S(S), .OutA(OutA), .OutB(OutB), .OutC(OutC), .OutD(OutD));
+
+endmodule

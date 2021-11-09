@@ -1,0 +1,10 @@
+Line 20: Bad keyword integer
+Line 22: Bad keyword initial
+Line 23: begin without always/case
+Line 30: Expected '@' after 'always'
+Line 32: Bad keyword if
+Line 30: Always without case(x)
+Line 37: Bad keyword posedge
+Line 39: Bad keyword if
+Line 37: Always without case(x)
+End of file /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_1/clkrst.v. Hash = -1591555750

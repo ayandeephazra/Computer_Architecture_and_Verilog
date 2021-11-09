@@ -1,0 +1,36 @@
+/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf_hier.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rf_hier
+
+Top level modules:
+	rf_hier
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rf_bench
+
+Top level modules:
+	rf_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/rf.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/dff.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_1/dff.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}}

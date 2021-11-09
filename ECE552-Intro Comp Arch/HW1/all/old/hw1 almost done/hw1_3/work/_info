@@ -1,0 +1,262 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/afs/cs.wisc.edu/u/a/y/ayan
+vclkrst
+Z0 !s110 1632369259
+!i10b 1
+!s100 ZzzHl;B1mbcM<UZQX`N5V1
+IoF`604F^51_cF_BlzY2O;2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3
+w1485366508
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v
+L0 12
+Z3 OP;L;10.7c;67
+r1
+!s85 0
+31
+Z4 !s108 1632369259.000000
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vdff
+R0
+!i10b 1
+!s100 YVYPgX10jcD@:7eFEVS1<3
+Ia^SH8H[Xdi0anL8Yj8P=80
+R1
+R2
+Z7 w1485366436
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v
+L0 6
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v|
+!i113 1
+R5
+R6
+vnand2
+R0
+!i10b 1
+!s100 Qaz<XiJiE34aBgU@ChX]m0
+I93@5ObKRKXYzD>I:=b5Am1
+R1
+R2
+R7
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v|
+!i113 1
+R5
+R6
+vnor2
+R0
+!i10b 1
+!s100 ^ST2=n6@V3Cn4lT]FaJWf1
+IfVEbbSJV<aLA13eYo7ooe1
+R1
+R2
+R7
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v|
+!i113 1
+R5
+R6
+vnot1
+R0
+!i10b 1
+!s100 [dhe[8iz;a=YaHa:alMQ`3
+IHHIC02S[l8bJndBaook`P1
+R1
+R2
+R7
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v|
+!i113 1
+R5
+R6
+vseqdec_26_bench
+R0
+!i10b 1
+!s100 bJ>BRVYLPDZ]5RGj8mE@z1
+IFB1795UR`cf[o0f8GMWFd1
+R1
+R2
+w1631748420
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v|
+!i113 1
+R5
+R6
+vseqdec_45_bench
+R0
+!i10b 1
+!s100 Lld=3XZf=T0RcfKJUb<CN2
+IoFX5Y9X9XPff57cVcZ>^I3
+R1
+R2
+Z8 w1631708648
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v|
+!i113 1
+R5
+R6
+vseqdec_52
+Z9 !s110 1632369260
+!i10b 1
+!s100 Jbl<?omT9:m@X524YKjc;3
+I4E5B69P9Oe8RVW]@6`9Yj1
+R1
+R2
+w1632369240
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1632369260.000000
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v|
+!i113 1
+R5
+R6
+vseqdec_52_bench
+R0
+!i10b 1
+!s100 MJn]3ZM]<3nfUDei_62d=0
+IFAYKB=2ba`HFBh^ijDQJ42
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v|
+!i113 1
+R5
+R6
+vseqdec_78_bench
+R0
+!i10b 1
+!s100 =c0INCD1@P>Td5Ym5W=Dh3
+IPReXmBT8fo6mVOR3eg8MF1
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v|
+!i113 1
+R5
+R6
+vseqdec_93_bench
+R0
+!i10b 1
+!s100 Lil>KL2<g^L_[M5fcMhnH2
+IL8zCm5[g7nfK0N][jAg`R3
+R1
+R2
+R8
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v|
+!i113 1
+R5
+R6
+vxor2
+R9
+!i10b 1
+!s100 URQ:lLM5T94FECh>cJDfl3
+I]zWmoDYRhdNo];0YjSfH[0
+R1
+R2
+R7
+8/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v
+F/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v|
+!i113 1
+R5
+R6

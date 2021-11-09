@@ -1,0 +1,10 @@
+Line 26: Bad keyword initial
+Line 28: begin without always/case
+Line 38: Bad keyword posedge
+Line 38: Always without case(x)
+Line 45: Bad keyword negedge
+Line 49: Bad keyword if
+Line 54: Bad keyword if
+Line 59: Bad keyword if
+Line 64: Bad keyword if
+End of file /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_1/quaddemux1_4_bench.v. Hash = -63546169

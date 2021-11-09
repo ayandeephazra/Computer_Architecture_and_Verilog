@@ -1,0 +1,65 @@
+ module proc(clk, rst, err);
+    input clk;
+    input rst;
+    output err;
+
+    // Your Code Here
+
+   // REG FILE HADNLING
+   reg [2:0] read1regsel;
+   reg [2:0] read2regsel;
+   reg [2:0] writeregsel;
+   reg [15:0] writedata, writedata_xor;
+   wire [15:0] writedata_addi;
+   reg        write;
+
+   wire [15:0] read1data;
+   wire [15:0] read2data;
+   reg [15:0] read1data_reg;
+   wire  err;
+   wire fetch_clk;
+   //////////////////////////
+   rf iRF(.read1data(read1data), .read2data(read2data), .err(err),  .clk(fetch_clk), .rst(rst), .read1regsel(read1regsel), .read2regsel(read2regsel), .writeregsel(writeregsel), .writedata(writedata), .write(write));
+    /////////////////////////
+    wire [15:0] instr;
+    reg halt;
+    reg addi, xor_en;
+    // opcode
+    reg [1:0] opcode;
+    reg [15:0]  temp_instr, xor_res;
+
+    fetch iFETCH(.clk(fetch_clk), .rst(rst), .err(err), .instr(instr));
+    fulladder16 iADDI_ADDER(.A(read1data_reg),.B({{11{instr[4]}}, instr[4:0]}),.S(writedata_addi),.Cout());
+
+    assign fetch_clk = halt? 0: clk;
+    //assign write = halt? 0: write;
+
+    always @ (fetch_clk) begin
+		assign temp_instr = instr;
+		assign halt = (temp_instr[15:11] === 5'b00000)? 1: 0;
+		assign write = (halt)? 0: 1;
+		assign addi = (temp_instr[15:11] === 5'b01000)? 1: 0;
+		assign xor_en = (temp_instr[15:11] === 5'b11011)? 1: 0;
+		//assign opcode = (halt)? 2'b00: {(addi)? 2'b01: {(xor_en)? 2'b10: 2'b11} };
+		// TODO OPCODE USE AN ALU THIS IS TOO COMPLCIATEDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		assign writedata = (addi)? writedata_addi: { (xor_en)? writedata_xor : writedata} ;
+	end
+    always @ (addi === 1 , fetch_clk) begin
+		read1regsel = instr[10:8];
+		writeregsel = instr[7:5];
+		//read1regsel = instr[7:5];
+		//writeregsel = instr[10:8];
+		read1data_reg = read1data;
+		write = 1;
+	end
+
+    always @ (xor_en=== 1 , fetch_clk) begin
+		read1regsel = instr[10:8];
+		read2regsel = instr[7:5];
+		writeregsel = instr[4:2];
+		assign xor_res = read1data ^ read2data;
+		writedata_xor = (fetch_clk)? xor_res: writedata;
+		write = 1;
+	end
+    
+endmodule

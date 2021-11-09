@@ -1,0 +1,64 @@
+/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/nor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/nor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fulladder16
+
+Top level modules:
+	fulladder16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/not1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/not1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fulladder_bench
+
+Top level modules:
+	fulladder_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder4.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder4.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fulladder4
+
+Top level modules:
+	fulladder4
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/xor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/xor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/nand2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/nand2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_2/fulladder1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fulladder1
+
+Top level modules:
+	fulladder1
+
+} {} {}}

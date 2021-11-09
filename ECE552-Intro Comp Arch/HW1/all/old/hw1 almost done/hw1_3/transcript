@@ -1,0 +1,13 @@
+# Loading project hw1_3_ece552
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of seqdec_26_bench.v was successful.
+# Compile of seqdec_45_bench.v was successful.
+# Compile of seqdec_52_bench.v was successful.
+# Compile of seqdec_78_bench.v was successful.
+# Compile of seqdec_93_bench.v was successful.
+# Compile of xor2.v was successful.
+# 11 compiles, 0 failed with no errors.

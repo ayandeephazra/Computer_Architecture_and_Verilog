@@ -1,0 +1,836 @@
+# Loading project hw3_2
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v failed with 6 errors.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 1 failed with 6 errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v failed with 4 errors.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 1 failed with 4 errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 0 failed with no errors.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 21:55:58 on Oct 24,2021
+# //  ModelSim DE 10.7c Aug 17 2018Linux 5.4.0-89-generic
+# //
+# //  Copyright 1991-2018 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim DE and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER1/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER2/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER3/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER1 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER2 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER3 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 5
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'xor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 6
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 7
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 8
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nand2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 9
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 10
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'nor2' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 11
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# ** Error: (vsim-3033) Instantiation of 'not1' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER/iADDER4/iADDER4 File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fulladder1.v Line: 12
+#         Searched libraries:
+#             /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/work
+# Error loading design
+# End time: 21:56:01 on Oct 24,2021, Elapsed time: 0:00:03
+# Errors: 128, Warnings: 0
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of xor2.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 21:57:42 on Oct 24,2021
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'enable'. The port definition is at: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/memory2c.v(35).
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iMEM File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 15
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (32) for port 'wr'. The port definition is at: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/memory2c.v(35).
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iMEM File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 15
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'S'.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 16
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'Cout'.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 16
+# Error loading design
+# End time: 21:57:42 on Oct 24,2021, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 2
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of xor2.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 21:58:50 on Oct 24,2021
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'S'.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 16
+# ** Error (suppressible): (vsim-3053) Illegal output or inout port connection for port 'Cout'.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch_hier_bench/DUT/f0/iFULLADDER File: /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v Line: 16
+# Error loading design
+# End time: 21:58:51 on Oct 24,2021, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of xor2.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 21:59:58 on Oct 24,2021
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+add wave -position insertpoint sim:/fetch_hier_bench/*
+run -all
+# Starting fetch.v testing
+# Break key hit
+# Simulation stop requested.
+run -all
+# Break key hit
+# Simulation stop requested.
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of xor2.v was successful.
+# 13 compiles, 0 failed with no errors.
+# Break key hit
+# Break key hit
+restart
+# Closing VCD file "dump.vcd"
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+# Break key hit
+# Break key hit
+# Load interrupted
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 21:59:58 on Oct 24,2021
+# Error loading design
+# End time: 22:03:13 on Oct 24,2021, Elapsed time: 0:03:15
+# Errors: 0, Warnings: 0
+vsim work.fetch_hier_bench
+# vsim work.fetch_hier_bench 
+# Start time: 22:03:29 on Oct 24,2021
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+add wave -position insertpoint sim:/fetch_hier_bench/*
+run -all
+# Starting fetch.v testing
+# Break key hit
+# Break in Module fetch at /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch.v line 25
+# Compile of clkrst.v was successful.
+# Compile of dff.v was successful.
+# Compile of fetch.v was successful.
+# Compile of fetch_hier.v was successful.
+# Compile of fetch_hier_bench.v was successful.
+# Compile of memory2c.v was successful.
+# Compile of fulladder1.v was successful.
+# Compile of fulladder4.v was successful.
+# Compile of fulladder16.v was successful.
+# Compile of nand2.v was successful.
+# Compile of nor2.v was successful.
+# Compile of not1.v was successful.
+# Compile of xor2.v was successful.
+# 13 compiles, 0 failed with no errors.
+restart
+# Closing VCD file "dump.vcd"
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+vsim work.fetch_hier_bench
+# End time: 22:05:16 on Oct 24,2021, Elapsed time: 0:01:47
+# Errors: 0, Warnings: 0
+# vsim work.fetch_hier_bench 
+# Start time: 22:05:16 on Oct 24,2021
+# Loading work.fetch_hier_bench
+# Loading work.fetch_hier
+# Loading work.clkrst
+# Loading work.fetch
+# Loading work.memory2c
+# Loading work.fulladder16
+# Loading work.fulladder4
+# Loading work.fulladder1
+# Loading work.xor2
+# Loading work.nand2
+# Loading work.not1
+# Loading work.nor2
+add wave -position insertpoint sim:/fetch_hier_bench/*
+run -all
+# Starting fetch.v testing
+# Break key hit
+# Simulation stop requested.

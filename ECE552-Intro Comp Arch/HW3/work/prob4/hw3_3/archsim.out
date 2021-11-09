@@ -1,0 +1,21 @@
+
+WISCalculator v1.0
+Author Derek Hower (drh5@cs.wisc.edu)
+Type "help" for more information
+
+Loading program...
+Executing...
+addi r1, r0, 1
+INUM:        0 PC: 0x0000 REG: 1 VALUE: 0x0001
+addi r2, r0, 2
+INUM:        1 PC: 0x0002 REG: 2 VALUE: 0x0002
+xor r3, r2, r1
+INUM:        2 PC: 0x0004 REG: 3 VALUE: 0x0003
+addi r1, r3, 2
+INUM:        3 PC: 0x0006 REG: 1 VALUE: 0x0005
+xor r1, r1, r1
+INUM:        4 PC: 0x0008 REG: 1 VALUE: 0x0000
+halt
+program halted
+INUM:        5 PC: 0x000a
+Program Finished

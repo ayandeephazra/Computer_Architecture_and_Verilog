@@ -1,0 +1,3 @@
+If we scale it up to a large number of bits, the program will slow down drastically. This is because the carry bit from one adder acts as an input to the next adder and thus we would need to incorporate it in the calculation of the critical path through the whole circuit. 
+
+This will lead to many potential complications, especially with the large number of clock cycles it will take for the output to become available correctly at the end of the circuit. 

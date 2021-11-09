@@ -1,0 +1,99 @@
+/* $Author: karu $ */
+/* $LastChangedDate: 2009-03-04 23:09:45 -0600 (Wed, 04 Mar 2009) $ */
+/* $Rev: 45 $ */
+module rf (
+           // Outputs
+           read1data, read2data, err,
+           // Inputs
+           clk, rst, read1regsel, read2regsel, writeregsel, writedata, write
+           );
+   input clk, rst;
+   input [2:0] read1regsel;
+   input [2:0] read2regsel;
+   input [2:0] writeregsel;
+   input [15:0] writedata;
+   input        write;
+
+   output [15:0] read1data;
+   output [15:0] read2data;
+   output        err;
+
+   // your code
+   reg [15:0] read1data_reg, read2data_reg;
+	
+   reg [15:0] reg0, reg1, reg2, reg3, reg4, reg5, reg6, reg7;
+   
+   always @ (rst) begin
+	assign reg0 = (rst)? 16'h0000: reg0 ;
+	assign reg1 = (rst)? 16'h0000: reg1 ;
+	assign reg2 = (rst)? 16'h0000: reg2 ;
+	assign reg3 = (rst)? 16'h0000: reg3 ;
+	assign reg4 = (rst)? 16'h0000: reg4 ;
+	assign reg5 = (rst)? 16'h0000: reg5 ;
+	assign reg6 = (rst)? 16'h0000: reg6 ;
+	assign reg7 = (rst)? 16'h0000: reg7 ;
+   end
+
+/*
+ always @ (read1regsel) begin
+   case (read1regsel)
+	3'b000: read1data_reg = reg0;
+	3'b001: read1data_reg = reg1;
+	3'b010: read1data_reg = reg2;
+	3'b011: read1data_reg = reg3;
+	3'b100: read1data_reg = reg4;
+	3'b101: read1data_reg = reg5;
+	3'b110: read1data_reg = reg6;
+	3'b111: read1data_reg = reg7;
+	default: begin //assign err = 1; end
+		end
+    endcase
+        assign read1data = read1data_reg;
+   end
+
+  
+   
+
+   always @ (read2regsel) begin
+   case (read2regsel)
+	3'b000: read2data_reg = reg0;
+	3'b001: read2data_reg = reg1;
+	3'b010: read2data_reg = reg2;
+	3'b011: read2data_reg = reg3;
+	3'b100: read2data_reg = reg4;
+	3'b101: read2data_reg = reg5;
+	3'b110: read2data_reg = reg6;
+	3'b111: read2data_reg = reg7;
+	default: begin //assign err = 1; end
+		end
+  endcase
+        assign read2data <= read2data_reg;
+  end
+*/
+
+   
+//////////////////////////////
+   assign read1data = (read1regsel[2])? {read1regsel[1]? {read1regsel[0]? reg7: reg6}: {read1regsel[0]? reg5: reg4}}: 
+                                         {read1regsel[1]? {read1regsel[0]? reg3: reg2}: {read1regsel[0]? reg1: reg0}};
+
+   assign read2data = (read2regsel[2])? {read2regsel[1]? {read2regsel[0]? reg7: reg6}: {read2regsel[0]? reg5: reg4}}: 
+                                         {read2regsel[1]? {read2regsel[0]? reg3: reg2}: {read2regsel[0]? reg1: reg0}};
+   
+   always @ (clk) begin
+   case (writeregsel)
+	3'b000: assign reg0 = (clk & write)? writedata: reg0;
+	3'b001: assign reg1 = (clk & write)? writedata: reg1;
+	3'b010: assign reg2 = (clk & write)? writedata: reg2; 
+	3'b011: assign reg3 = (clk & write)? writedata: reg3;
+	3'b100: assign reg4 = (clk & write)? writedata: reg4;
+	3'b101: assign reg5 = (clk & write)? writedata: reg5;
+	3'b110: assign reg6 = (clk & write)? writedata: reg6;
+	3'b111: assign reg7 = (clk & write)? writedata: reg7;
+	default: begin// assign err = 1; end
+		end
+    endcase
+   end
+
+
+endmodule
+// DUMMY LINE FOR REV CONTROL :1:

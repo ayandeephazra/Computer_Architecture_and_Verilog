@@ -1,0 +1,16 @@
+Line 52: Bad keyword integer
+Line 53: Bad keyword integer
+Line 59: Bad keyword initial
+Line 60: begin without always/case
+Line 62: Bad keyword for
+Line 63: begin without always/case
+Line 67: Bad keyword posedge
+Line 68: Bad keyword if
+Line 70: Bad keyword if
+Line 75: Bad keyword else
+Line 76: Bad keyword if
+Line 79: Bad keyword if
+Line 81: Bad keyword if
+Line 83: Bad keyword for
+Line 67: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/hw3/hw3/hw3_3/memory2c.v. Hash = -1393349992

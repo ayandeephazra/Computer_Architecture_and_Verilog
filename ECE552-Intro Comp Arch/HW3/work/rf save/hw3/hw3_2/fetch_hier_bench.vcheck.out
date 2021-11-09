@@ -1,0 +1,10 @@
+Line 12: Bad keyword initial
+Line 13: begin without always/case
+Line 18: Bad keyword posedge
+Line 19: Bad keyword if
+Line 21: Bad keyword if
+Line 31: Bad keyword if
+Line 32: Bad keyword if
+Line 33: Bad keyword else
+Line 18: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/hw3/hw3/hw3_2/fetch_hier_bench.v. Hash = -1803883924

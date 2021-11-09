@@ -1,0 +1,208 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/u/a/y/ayan/private/cs552/hw2/hw2_2
+valu
+Z1 !s110 1633661906
+!i10b 1
+!s100 PIXQDdhoH:4I20CCT@h8N2
+I6T6]VDmc4Wennml4kHZcJ0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1633657222
+8alu.v
+Falu.v
+L0 1
+Z3 OP;L;10.7c;67
+r1
+!s85 0
+31
+Z4 !s108 1633661906.000000
+!s107 shifter.v|mux_4_1.v|mux_2_1.v|clkrst.v|cla_4.v|cla_16.v|alu.v|alu_hier.v|alu_hier_bench.v|
+Z5 !s90 +define+RANDSEED=3|-work|__work|alu_hier_bench.v|alu_hier.v|alu.v|cla_16.v|cla_4.v|clkrst.v|mux_2_1.v|mux_4_1.v|shifter.v|
+!i113 1
+Z6 o-work __work
+Z7 !s92 +define+RANDSEED=3 -work __work
+Z8 tCvgOpt 0
+valu_hier
+R1
+!i10b 1
+!s100 1kZE?CfUgT7D^h0`2GSh>1
+IDCLVfWJb];Xo=^M4LQm<_2
+R2
+R0
+Z9 w1633415990
+8alu_hier.v
+Falu_hier.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+Z10 !s107 shifter.v|mux_4_1.v|mux_2_1.v|clkrst.v|cla_4.v|cla_16.v|alu.v|alu_hier.v|alu_hier_bench.v|
+R5
+!i113 1
+R6
+R7
+R8
+valu_hier_bench
+R1
+!i10b 1
+!s100 zfRGDAbFcnPKREzY1ac9[1
+IlkoCCKo`5RSi?8C<[]=860
+R2
+R0
+R9
+8alu_hier_bench.v
+Falu_hier_bench.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vcla_16
+R1
+!i10b 1
+!s100 M3nOG9C:2W4TNO138Ez_;3
+Io0H5bQhh9[:o;>W_XC`[W0
+R2
+R0
+w1633661159
+8cla_16.v
+Fcla_16.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vcla_4
+R1
+!i10b 1
+!s100 oKYTOIVV[kOZ6ngOB:=NR3
+I?K<]D:N_K^BV7nDAN=kR53
+R2
+R0
+w1633661136
+8cla_4.v
+Fcla_4.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vclkrst
+R1
+!i10b 1
+!s100 0KTcfnZcK]Cl21ChoHVDc1
+IC=[IONkREEm>ki9S]7^Mc2
+R2
+R0
+R9
+8clkrst.v
+Fclkrst.v
+L0 12
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vmux_2_1
+R1
+!i10b 1
+!s100 `MOn]CLVGoXE9D;f]?;@80
+I:439TP7DZWRZG`OAPHdG82
+R2
+R0
+w1633619382
+8mux_2_1.v
+Fmux_2_1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vmux_4_1
+R1
+!i10b 1
+!s100 H>^QaM_4k8d6Ak2_ko4Nd1
+IKoB9B^`8k@70PdQQ=Kf0?0
+R2
+R0
+w1633657651
+8mux_4_1.v
+Fmux_4_1.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8
+vshifter
+R1
+!i10b 1
+!s100 CkUB<3gfnD`k;>ln7j>1I2
+I5;F9j<F35zCo4D5T9lgN22
+R2
+R0
+w1633622050
+8shifter.v
+Fshifter.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R10
+R5
+!i113 1
+R6
+R7
+R8

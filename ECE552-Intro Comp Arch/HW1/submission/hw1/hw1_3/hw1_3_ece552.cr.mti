@@ -1,0 +1,85 @@
+/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/dff.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nor2
+
+Top level modules:
+	nor2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/not1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module not1
+
+Top level modules:
+	not1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_78_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_78_bench
+
+Top level modules:
+	seqdec_78_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_52
+
+Top level modules:
+	seqdec_52
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_26_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_26_bench
+
+Top level modules:
+	seqdec_26_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_45_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_45_bench
+
+Top level modules:
+	seqdec_45_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_52_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_52_bench
+
+Top level modules:
+	seqdec_52_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/nand2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module nand2
+
+Top level modules:
+	nand2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/xor2.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module xor2
+
+Top level modules:
+	xor2
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/hw1/hw1_3/seqdec_93_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module seqdec_93_bench
+
+Top level modules:
+	seqdec_93_bench
+
+} {} {}}
