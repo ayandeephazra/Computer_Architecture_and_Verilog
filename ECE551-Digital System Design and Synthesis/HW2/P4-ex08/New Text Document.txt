@@ -1,7 +1,3 @@
-module I_term(clk, rst_n, err_vld, moving, err_sat, I_term);
-
-input clk, rst_n, err_vld, moving;
-input signed [9:0]err_sat;
 
 	logic signed [8:0]I_term;
 	logic overflow;
@@ -33,5 +29,3 @@ input signed [9:0]err_sat;
 	// only when err_vld is high
 	//assign I_term =  (err_vld)?integrator[14:6]:I_term;
     assign I_term = integrator[14:6];
-
-endmodule
