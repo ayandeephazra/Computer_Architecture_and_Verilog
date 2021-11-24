@@ -1,0 +1,7 @@
+b) The performance of a processor is improved if we incorporate branch prediction in the design. r5 is set to 27 and r4 is set to 25. Thus, as r6 is set to 1 in the code, beqz branch should not be taken. Thus nop is executed without the processor stalling. 
+
+Similarly for the bnez instruction, since r6 != 0, the branch is taken to afternop2, so it skips the first nop. 
+
+In the 5-stage design then, nop is in the fetch stage, while branch is in the decode stage. But If we predict the branch is not taken, we do not have to wait for the WB stage to complete.
+
+c) We actually know whether the branch will be taken in the execute stage. So branch prediction can take more than 1 cycle in the case that there is misprediction. In that case, we flush the two instructions in Fetch and Decode stage.

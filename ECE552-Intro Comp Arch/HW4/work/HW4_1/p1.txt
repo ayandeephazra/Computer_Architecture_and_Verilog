@@ -1,0 +1,7 @@
+Forwarding takes place on the 2nd, 3rd and 4th instructions but from different pipeline stages.
+
+For the second instruction, the r4 value is forwarded from the MEM/WB stage to input 2 of alu.
+
+For the third instruction, the r4 value from the EX/MEM register forwared to input 1 of the alu.
+
+For the fourth instruction, the r4 and r5 value from the MEM/WB register forwared to input 1 of the alu.
