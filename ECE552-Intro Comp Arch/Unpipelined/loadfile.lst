@@ -1,0 +1,127 @@
+          // shiftTest
+          //
+          // Test program for WISC-SP06 architecture:
+          // shifts and bit-reverse and set-condition;
+          // for the single-cycle implementation.
+          //
+          // CS/ECE 552, Spring 2006
+          // Andy Phelps  27 March 2006
+          //
+          // modified by Karu 03/20/2008
+          // replaced srai with rori
+          // replaced tm with btr
+          // register values in comments not correct anymore!!
+                  
+          // shift left logical
+0000 c001 lbi r0, 1          // r0 = 0x0001
+0002 a821 slli r1, r0, 1     // r1 = 0x0002
+0004 a983 slli r4, r1, 3     // r4 = 0x0010
+0006 d431 sll r4, r4, r1     // r4 = 0x0040
+0008 dc34 add r5, r4, r1     // r5 = 0x0042
+000a d5b9 sll r6, r5, r5     // r6 = 0x0108
+000c debc add r7, r6, r5     // r7 = 0x014a
+000e af04 slli r0, r7, 4     // r0 = 0x14a0
+0010 a828 slli r1, r0, 8     // r1 = 0xa000
+0012 d7e9 sll r2, r7, r7     // r2 = 0x2800
+0014 d95c add r7, r1, r2     // r7 = 0xc800
+          
+          // rotate left
+0016 c002 lbi r0, 2          // r0 = 0x0002
+0018 a021 roli r1, r0, 1     // r1 = 0x0004
+001a a143 roli r2, r1, 3     // r2 = 0x0020
+001c d20c rol r3, r2, r0     // r3 = 0x0080
+001e db30 add r4, r3, r1     // r4 = 0x0084
+0020 d494 rol r5, r4, r4     // r5 = 0x0840
+0022 dd98 add r6, r5, r4     // r6 = 0x08c4
+0024 a607 roli r0, r6, 7     // r0 = 0x6204
+0026 a028 roli r1, r0, 8     // r1 = 0x0462
+0028 a64d roli r2, r6, 13    // r2 = 0x8118
+002a d944 add r1, r1, r2     // r1 = 0x857a
+002c df3c add r7, r7, r1     // r7 = 0x4d7a
+          
+          // shift right arithmetic
+002e c040 lbi r0, 0x40       // r0 = 0x0040
+0030 9050 slbi r0, 0x50      // r0 = 0x4050
+0032 b021 rori r1, r0, 1     // r1 = 0x2028
+0034 b145 rori r2, r1, 5     // r2 = 0x0101
+0036 a16c roli r3, r1, 12    // r3 = 0x8202
+0038 db2c add r3, r3, r1     // r3 = 0xa22a
+003a b381 rori r4, r3, 1     // r4 = 0xd115
+003c b3a2 rori r5, r3, 2     // r5 = 0xe88a
+003e b3c4 rori r6, r3, 4     // r6 = 0xfa22
+0040 b305 rori r0, r3, 5     // r0 = 0xfd11
+0042 b328 rori r1, r3, 8     // r1 = 0xffa2
+0044 b34d rori r2, r3, 13    // r2 = 0xfffd
+0046 da28 add r2, r2, r1     // r2 = 0xff9f
+0048 da08 add r2, r2, r0     // r2 = 0xfcb0
+004a dac8 add r2, r2, r6     // r2 = 0xf6d2
+004c daa8 add r2, r2, r5     // r2 = 0xdf5c
+004e da88 add r2, r2, r4     // r2 = 0xb071
+0050 df5c add r7, r7, r2     // r7 = 0xfdeb
+          
+          // shift right logical
+0052 c040 lbi r0, 0x40       // r0 = 0x0040
+0054 9050 slbi r0, 0x50      // r0 = 0x4050
+0056 b821 srli r1, r0, 1     // r1 = 0x2028
+0058 b945 srli r2, r1, 5     // r2 = 0x0101
+005a a16c roli r3, r1, 12    // r3 = 0x8202
+005c db2c add r3, r3, r1     // r3 = 0xa22a
+005e bb81 srli r4, r3, 1     // r4 = 0x5115
+0060 bba2 srli r5, r3, 2     // r5 = 0x288a
+0062 bbc3 srli r6, r3, 3     // r6 = 0x1445
+0064 bb07 srli r0, r3, 7     // r0 = 0x0144
+0066 bb29 srli r1, r3, 9     // r1 = 0x0051
+0068 bb4e srli r2, r3, 14    // r2 = 0x0002
+006a da28 add r2, r2, r1     // r2 = 0x0053
+006c da08 add r2, r2, r0     // r2 = 0x0197
+006e dac8 add r2, r2, r6     // r2 = 0x15dc
+0070 daa8 add r2, r2, r5     // r2 = 0x3e66
+0072 da88 add r2, r2, r4     // r2 = 0x8f7b
+0074 df5c add r7, r7, r2     // r7 = 0x8d66
+          
+0076 c012 lbi r0, 0x12       // r0 = 0x0012
+0078 c804 btr r1, r0      // r1 = 0x0001
+007a a141 roli r2, r1, 1     // r2 = 0x0002
+007c c90c btr r3, r1      // r3 = 0xffff
+007e ca10 btr r4, r2      // r4 = 0x0000
+          
+          // Set-condition:  seq, slt, sle, sco
+          
+0080 c0fe lbi r0, 0xfe       //
+0082 9001 slbi r0, 0x01      // r0 = 0xfe01
+0084 c19a lbi r1, 0x9a       //
+0086 91ff slbi r1, 0xff      // r1 = 0x9aff
+0088 c278 lbi r2, 0x78       //
+008a 9288 slbi r2, 0x88      // r2 = 0x7888
+008c e02c seq r3, r0, r1     // r3 = 0x0000
+008e e010 seq r4, r0, r0     // r4 = 0x0001
+0090 aca1 slli r5, r4, 1     // r5 = 0x0002
+0092 dbac add r3, r3, r5     // r3 = 0x0002
+0094 ea30 slt r4, r2, r1     // r4 = 0x0000
+0096 aca2 slli r5, r4, 2     // r5 = 0x0000
+0098 dbac add r3, r3, r5     // r3 = 0x0002
+009a e910 slt r4, r1, r0     // r4 = 0x0001
+009c aca3 slli r5, r4, 3     // r5 = 0x0008
+009e dbac add r3, r3, r5     // r3 = 0x000a
+00a0 e810 slt r4, r0, r0     // r4 = 0x0000
+00a2 aca4 slli r5, r4, 4     // r5 = 0x0000
+00a4 dbac add r3, r3, r5     // r3 = 0x000a
+00a6 f230 sle r4, r2, r1     // r4 = 0x0000
+00a8 aca5 slli r5, r4, 5     // r5 = 0x0000
+00aa dbac add r3, r3, r5     // r3 = 0x000a
+00ac f010 sle r4, r0, r0     // r4 = 0x0001
+00ae aca6 slli r5, r4, 6     // r5 = 0x0040
+00b0 dbac add r3, r3, r5     // r3 = 0x004a
+00b2 f830 sco r4, r0, r1     // r4 = 0x0001
+00b4 aca7 slli r5, r4, 7     // r5 = 0x0080
+00b6 dbac add r3, r3, r5     // r3 = 0x00ca
+00b8 fa50 sco r4, r2, r2     // r4 = 0x0000
+00ba aca9 slli r5, r4, 9     // r5 = 0x0000
+00bc dbac add r3, r3, r5     // r3 = 0x00ca
+          
+00be df7c add r7, r7, r3     // r7 = 0x8e30
+00c0 47e0 addi r7, r7, 0     // r7 = 0x8e30
+          
+00c2 0000 halt
+00c4 85e0 st r7, r5, 0 // this should never execute
+00c6 85e0 st r7, r5, 0 // this should never execute

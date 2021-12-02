@@ -1,0 +1,16 @@
+Line 18: Bad keyword integer
+Line 19: Bad keyword integer
+Line 25: Bad keyword initial
+Line 26: begin without always/case
+Line 28: Bad keyword for
+Line 29: begin without always/case
+Line 33: Bad keyword posedge
+Line 34: Bad keyword if
+Line 36: Bad keyword if
+Line 41: Bad keyword else
+Line 42: Bad keyword if
+Line 45: Bad keyword if
+Line 47: Bad keyword if
+Line 49: Bad keyword for
+Line 33: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/upl/memory2c.v. Hash = -1393349992

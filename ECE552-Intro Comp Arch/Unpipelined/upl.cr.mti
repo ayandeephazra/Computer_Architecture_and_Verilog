@@ -1,0 +1,232 @@
+/afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux8_1_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux8_1_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux8_1_16
+
+Top level modules:
+	mux8_1_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/dff.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/dff.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module dff
+
+Top level modules:
+	dff
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/control.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/control.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/srl.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/srl.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module srl
+
+Top level modules:
+	srl
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/branch_sel.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/branch_sel.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module branch_sel
+
+Top level modules:
+	branch_sel
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc_hier_bench.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc_hier_bench.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module proc_hier_bench
+
+Top level modules:
+	proc_hier_bench
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux8_1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux8_1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux8_1
+
+Top level modules:
+	mux8_1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/enableWriting.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/enableWriting.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module enableWriting
+
+Top level modules:
+	enableWriting
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rr.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rr.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rr
+
+Top level modules:
+	rr
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/writeback.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/writeback.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module writeback
+
+Top level modules:
+	writeback
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/reg_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/reg_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module reg_16
+
+Top level modules:
+	reg_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/se_handler.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/se_handler.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module se_handler
+
+Top level modules:
+	se_handler
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/sra.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/sra.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module sra
+
+Top level modules:
+	sra
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/jump_sel.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/jump_sel.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module jump_sel
+
+Top level modules:
+	jump_sel
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rf.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rf.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rf
+
+Top level modules:
+	rf
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1_3.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1_3.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux4_1_3
+
+Top level modules:
+	mux4_1_3
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/memory.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/memory.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/fetch.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/fetch.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux2_1_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux2_1_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux2_1_16
+
+Top level modules:
+	mux2_1_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/cla_4.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/cla_4.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cla_4
+
+Top level modules:
+	cla_4
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/sll.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/sll.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module sll
+
+Top level modules:
+	sll
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/execute.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/execute.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/clkrst.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/clkrst.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module clkrst
+
+Top level modules:
+	clkrst
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc_hier.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc_hier.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module proc_hier
+
+Top level modules:
+	proc_hier
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/proc.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module proc
+
+Top level modules:
+	proc
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux2_1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux2_1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux2_1
+
+Top level modules:
+	mux2_1
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/decode.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/decode.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module decode
+
+Top level modules:
+	decode
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux4_1_16
+
+Top level modules:
+	mux4_1_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/shifter.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/shifter.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/cla_16.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/cla_16.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module cla_16
+
+Top level modules:
+	cla_16
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rl.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/rl.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module rl
+
+Top level modules:
+	rl
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/memory2c.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/memory2c.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module memory2c
+
+Top level modules:
+	memory2c
+
+} {} {}} /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1.v {1 {vlog -work work -stats=none /afs/cs.wisc.edu/u/a/y/ayan/private/cs552/upl/mux4_1.v
+Model Technology ModelSim DE vlog 10.7c Compiler 2018.08 Aug 17 2018
+-- Compiling module mux4_1
+
+Top level modules:
+	mux4_1
+
+} {} {}}

@@ -1,0 +1,20 @@
+Line 24: Bad keyword integer
+Line 25: Bad keyword integer
+Line 26: Bad keyword integer
+Line 32: Bad keyword initial
+Line 33: begin without always/case
+Line 41: Bad keyword posedge
+Line 42: Bad keyword if
+Line 43: Bad keyword if
+Line 57: Bad keyword if
+Line 58: Bad keyword if
+Line 67: Bad keyword else
+Line 67: Bad keyword if
+Line 75: Bad keyword else
+Line 82: Bad keyword else
+Line 82: Bad keyword if
+Line 94: Bad keyword else
+Line 95: Bad keyword if
+Line 102: Bad keyword else
+Line 41: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/upl/proc_hier_bench.v. Hash = -1351996677
