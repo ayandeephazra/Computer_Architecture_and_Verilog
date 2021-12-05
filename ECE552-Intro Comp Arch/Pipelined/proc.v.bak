@@ -1,0 +1,282 @@
+module proc (
+   // Outputs
+   err, 
+   // Inputs
+   clk, rst
+   );
+
+   input clk;
+   input rst;
+   output err;
+
+/////////////////////////////////////////////////////////////////////////////////////
+//			    REGISTERS AND WIRES	(R/W)				   //
+/////////////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////
+// 		FETCH (R/W)	       //
+/////////////////////////////////////////
+  wire [15:0] instr;
+  wire [15:0] pc, nxt_pc;
+  wire halt;
+  wire [15:0] epc_out;
+
+
+/////////////////////////////////////////
+// 		IF/ID		       //
+/////////////////////////////////////////
+  wire [15:0] instr_IFID;
+  wire [15:0] nxt_pc_IFID;
+  wire branch_IFID;
+
+
+/////////////////////////////////////////
+// 		DECODE	   	       //
+/////////////////////////////////////////
+  wire [15:0] A, B;
+  wire [1:0] srcALU;
+  wire inv_A, inv_B;
+  wire cin;
+  wire [15:0] se_5, ze_5, se_8, ze_8, se_11;
+  wire se;
+  wire siic;
+  wire [4:0] AB;
+  wire [1:0] regDestination;
+  wire memWrite, memtoreg, regWrite;
+  wire rti;
+  wire stall;
+  wire enPC;
+  wire enIFID;
+
+/////////////////////////////////////////
+// 		ID/EX		       //
+/////////////////////////////////////////
+  wire [15:0] instr_IDEX;
+  wire [15:0] nxt_pc_IDEX;
+  wire [15:0] A_IDEX, B_IDEX;
+  wire [4:0] AB_IDEX;
+  wire inv_A_IDEX, inv_B_IDEX, cin_IDEX;
+  wire [15:0] se_5_IDEX, ze_5_IDEX, se_8_IDEX, ze_8_IDEX, se_11_IDEX;
+  wire se_IDEX;
+  wire [1:0] srcALU_IDEX;
+  wire [1:0] regDestination_IDEX;
+  wire memWrite_IDEX, memtoreg_IDEX, regWrite_IDEX;
+  wire halt_IDEX;
+  wire siic_IDEX;
+  wire rti_IDEX;
+  wire siic_EXMEM;
+  wire rti_EXMEM;
+
+/////////////////////////////////////////
+// 		EXECUTE (R/W)	       //
+/////////////////////////////////////////
+  wire [15:0] ALUres;
+  wire enJAL;
+  wire [2:0] regsel;
+  wire branch;
+
+/////////////////////////////////////////
+// 		EX/MEM		       //
+/////////////////////////////////////////
+  wire [15:0] pc_EXMEM;
+  wire [15:0] nxt_pc_EXMEM;
+  wire [15:0] ALUres_EXMEM;
+  wire [15:0] B_EXMEM;
+  wire [4:0] AB_EXMEM;
+  wire [2:0] regsel_EXMEM;
+  wire memWrite_EXMEM, memtoreg_EXMEM, regWrite_EXMEM;
+  wire halt_EXMEM;
+  wire enJAL_EXMEM;
+  wire branch_EXMEM;
+
+/////////////////////////////////////////
+// 		MEM		       //
+/////////////////////////////////////////
+  wire [15:0] readData;
+
+/////////////////////////////////////////
+// 		MEM/WB		       //
+/////////////////////////////////////////
+  wire [15:0] pc_MEMWB;
+  wire [15:0] nxt_pc_MEMWB;
+  wire [15:0] ALUres_MEMWB;
+  wire [15:0] readData_MEMWB;
+  wire [4:0] AB_MEMWB;
+  wire [2:0] regsel_MEMWB;
+  wire memtoreg_MEMWB, regWrite_MEMWB;
+  wire enJAL_MEMWB;
+  wire branch_MEMWB;
+  wire halt_MEMWB;
+
+
+/////////////////////////////////////////
+// 		WB		       //
+/////////////////////////////////////////
+  wire [15:0] writeData;
+  wire halt_final;
+
+  assign err = 1'b0;
+
+  fetch fetch0 (.clk(clk), .rst(rst),
+   .pc(pc_MEMWB),
+   .AB(|AB[4:2]), .AB_IDEX(|AB_IDEX[4:2]), .AB_EXMEM(|AB_EXMEM[4:2]), .AB_MEMWB(|AB_MEMWB[4:2]), 
+   .halt(halt_MEMWB), 
+   .enablePC(enPC), 
+   .stall(stall), 
+   .branchEXMEM(branch_MEMWB),
+   .nxt_pc(nxt_pc), 
+   .instr(instr),
+   .siic(siic),
+   .rti(rti),
+   .epc_out(epc_out)
+  );
+
+  IFID ifid0 (.clk(clk), .rst(rst),
+   .nxt_pc_in(nxt_pc), .nxt_pc_out(nxt_pc_IFID),
+   .instr_in(instr), .instr_out(instr_IFID),
+   .en(enIFID)
+  );
+
+  decode decode0 (.clk(clk), .rst(rst),
+   .instr(instr_IFID), 
+   .writeData(writeData), 
+   .regsel(regsel_MEMWB),
+   .regWrite_in(regWrite_MEMWB),
+   .se_5(se_5), .ze_5(ze_5), 
+   .se_8(se_8), .ze_8(ze_8), 
+   .se_11(se_11), 
+   .se(se),
+   .A(A), .B(B), 
+   .AB(AB),
+   .srcALU(srcALU), 
+   .regDestination(regDestination),
+   .memWrite(memWrite), .memtoreg(memtoreg), .regWrite_out(regWrite),
+   .inv_A(inv_A), .inv_B(inv_B), .cin(cin), 
+   .halt(halt),
+   .siic(siic),
+   .rti(rti)
+  );
+
+  hazard_detection_unit hdu0 (
+   .AB(AB),
+   .wrt_sel_IDEX(regsel), 
+   .wrt_sel_EXMEM(regsel_EXMEM), 
+   .wrt_sel_MEMWB(regsel_MEMWB), 
+   .rd_reg1_IFID(instr_IFID[10:8]), 
+   .rd_reg2_IFID(instr_IFID[7:5]), 
+   .wrt_reg_IDEX(regWrite_IDEX), 
+   .wrt_reg_EXMEM(regWrite_EXMEM), 
+   .wrt_reg_MEMWB(regWrite_MEMWB), 
+   .stall(stall), 
+   .enPC(enPC), 
+   .enIFID(enIFID),
+   .siic(siic_EXMEM),
+   .rti(rti_IDEX)
+  );
+
+  IDEX idex0 (.clk(clk), .rst(rst),
+   .instr_in(instr_IFID), .instr_out(instr_IDEX), 
+   .nxt_pc_in(nxt_pc_IFID), .nxt_pc_out(nxt_pc_IDEX), 
+   .A_in(A), .A_out(A_IDEX), 
+   .B_in(B), .B_out(B_IDEX), 
+   .inv_A_in(inv_A), .inv_A_out(inv_A_IDEX), 
+   .inv_B_in(inv_B), .inv_B_out(inv_B_IDEX), 
+   .cin_in(cin), .cin_out(cin_IDEX), 
+   .AB_in(AB), .AB_out(AB_IDEX), 
+   .se_5_in(se_5), .se_5_out(se_5_IDEX), 
+   .ze_5_in(ze_5), .ze_5_out(ze_5_IDEX), 
+   .se_8_in(se_8), .se_8_out(se_8_IDEX), 
+   .ze_8_in(ze_8), .ze_8_out(ze_8_IDEX), 
+   .se_11_in(se_11), .se_11_out(se_11_IDEX), 
+   .se_in(se), .se_out(se_IDEX), 
+   .srcALU_in(srcALU), .srcALU_out(srcALU_IDEX), 
+   .regDestination_in(regDestination), .regDestination_out(regDestination_IDEX), 
+   .memWrite_in(memWrite), .memWrite_out(memWrite_IDEX), 
+   .memtoreg_in(memtoreg), .memtoreg_out(memtoreg_IDEX), 
+   .regWrite_in(regWrite), .regWrite_out(regWrite_IDEX), 
+   .halt_in(halt), .halt_out(halt_IDEX), 
+   .siic(siic), .siic_out(siic_IDEX),
+   .rti(rti), .rti_out(rti_IDEX),
+   .stall(stall), 
+   .en(1'b1)
+  );
+
+  execute execute0 (
+   .instr(instr_IDEX), 
+   .A(A_IDEX), .B(B_IDEX), 
+   .nxt_pc(nxt_pc_IDEX), 
+   .se_5(se_5_IDEX), .ze_5(ze_5_IDEX), 
+   .se_8(se_8_IDEX), .ze_8(ze_8_IDEX), 
+   .se_11(se_11_IDEX), 
+   .se(se_IDEX),
+   .srcALU(srcALU_IDEX), 
+   .regDestination(regDestination_IDEX),
+   .inv_A(inv_A_IDEX), .inv_B(inv_B_IDEX), .cin(cin_IDEX), 
+   .ALUres(ALUres), 
+   .pc(pc),
+   .regsel(regsel), 
+   .enJAL(enJAL),
+   .branch(branch),
+   .siic(siic_IDEX),
+   .rti(rti_IDEX),
+   .clk(clk),
+   .rst(rst),
+   .epc_out(epc_out)
+  );
+
+  EXMEM exmem0 (.clk(clk), .rst(rst),
+   .B_in(B_IDEX), .B_out(B_EXMEM), 
+   .ALUres_in(ALUres), .ALUres_out(ALUres_EXMEM), 
+   .nxt_pc_in(nxt_pc_IDEX), .nxt_pc_out(nxt_pc_EXMEM), 
+   .pc_in(pc), .pc_out(pc_EXMEM), 
+   .AB_in(AB_IDEX), .AB_out(AB_EXMEM), 
+   .regsel_in(regsel), .regsel_out(regsel_EXMEM), 
+   .enJAL_in(enJAL), .enJAL_out(enJAL_EXMEM), 
+   .branch_in(branch), .branch_out(branch_EXMEM), 
+   .memtoreg_in(memtoreg_IDEX), .memtoreg_out(memtoreg_EXMEM), 
+   .memWrite_in(memWrite_IDEX), .memWrite_out(memWrite_EXMEM), 
+   .regWrite_in(regWrite_IDEX), .regWrite_out(regWrite_EXMEM), 
+   .halt_in(halt_IDEX), .halt_out(halt_EXMEM), 
+   .siic(siic_IDEX), .siic_out(siic_EXMEM),
+   .rti(rti_IDEX), .rti_out(rti_EXMEM),
+   .en(1'b1)
+  );
+
+  memory memory0 (.clk(clk), .rst(rst), 
+   .writeData(B_EXMEM), 
+   .ALUres(ALUres_EXMEM), 
+   .memRead(memtoreg_EXMEM), 
+   .memWrite(memWrite_EXMEM), 
+   .halt(halt_EXMEM), 
+   .readData(readData)
+  );
+
+  MEMWB memwb0 (.clk(clk), .rst(rst),
+   .readData_in(readData), .readData_out(readData_MEMWB), 
+   .nxt_pc_in(nxt_pc_EXMEM), .nxt_pc_out(nxt_pc_MEMWB), 
+   .pc_in(pc_EXMEM), .pc_out(pc_MEMWB), 
+   .ALUres_in(ALUres_EXMEM), .ALUres_out(ALUres_MEMWB), 
+   .AB_in(AB_EXMEM), .AB_out(AB_MEMWB), 
+   .regSel_in(regsel_EXMEM), .regSel_out(regsel_MEMWB), 
+   .regWrite_in(regWrite_EXMEM), .regWrite_out(regWrite_MEMWB), 
+   .memtoreg_in(memtoreg_EXMEM), .memtoreg_out(memtoreg_MEMWB), 
+   .enJAL_in(enJAL_EXMEM), .enJAL_out(enJAL_MEMWB), 
+   .branch_in(branch_EXMEM), .branch_out(branch_MEMWB), 
+   .halt_in(halt_EXMEM), .halt_out(halt_MEMWB),
+   .en(1'b1)
+  );
+
+  write_back wb0 (
+   .ALUres(ALUres_MEMWB), 
+   .readData(readData_MEMWB), 
+   .nxt_pc(nxt_pc_MEMWB), 
+   .enJAL(enJAL_MEMWB), 
+   .memtoreg(memtoreg_MEMWB), 
+   .writeData(writeData)
+  );
+
+  // POST HANDLING
+  wire siic_save, rti_save;
+  reg_1 halting(.clk(clk), .rst(rst), .en_w_or_r(halt_MEMWB), .in(halt_MEMWB), .out(halt_final));
+  reg_1 savesiic(.clk(clk), .rst(rst), .en_w_or_r(siic), .in(siic), .out(siic_save));
+endmodule 

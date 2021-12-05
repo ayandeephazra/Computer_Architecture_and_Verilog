@@ -1,0 +1,25 @@
+
+WISCalculator v1.0
+Author Derek Hower (drh5@cs.wisc.edu)
+Type "help" for more information
+
+Loading program...
+Executing...
+j 6
+INUM:        0 PC: 0x0000
+lbi r1, 0
+INUM:        1 PC: 0x0008 REG: 1 VALUE: 0x0000
+lbi r0, 0
+INUM:        2 PC: 0x000a REG: 0 VALUE: 0x0000
+exception: Illegal Opcode
+INUM:        3 PC: 0x000c
+lbi r0, 0
+INUM:        4 PC: 0x0002 REG: 0 VALUE: 0x0000
+rti
+INUM:        5 PC: 0x0004
+lbi r4, 44
+INUM:        6 PC: 0x000e REG: 4 VALUE: 0x002c
+halt
+program halted
+INUM:        7 PC: 0x0010
+Program Finished

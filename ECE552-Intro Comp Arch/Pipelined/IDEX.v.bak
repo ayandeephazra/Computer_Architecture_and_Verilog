@@ -1,0 +1,79 @@
+module IDEX (instr_in, instr_out, nxt_pc_in, nxt_pc_out, A_in, A_out, B_in, B_out, inv_A_in, 
+             inv_A_out, inv_B_in, inv_B_out, cin_in, cin_out, AB_in, AB_out, se_5_in, se_5_out, 
+             ze_5_in, ze_5_out, se_8_in, se_8_out, ze_8_in, ze_8_out, se_11_in, se_11_out, se_in,
+             se_out, srcALU_in, srcALU_out, regDestination_in, regDestination_out, memWrite_in, 
+             memWrite_out, memtoreg_in, memtoreg_out, regWrite_in, regWrite_out, halt_in, halt_out, 
+             stall, siic, siic_out, rti, rti_out, en, clk, rst);
+
+  input clk, rst;
+  input [4:0] AB_in;
+  input [15:0] se_5_in, ze_5_in, se_8_in, ze_8_in, se_11_in;
+  input se_in;
+  input [1:0] srcALU_in;
+  input [1:0] regDestination_in;
+  input [15:0] instr_in, nxt_pc_in;
+  input [15:0] A_in, B_in;
+  input inv_A_in, inv_B_in, cin_in;
+  input memWrite_in, memtoreg_in, regWrite_in;
+  input halt_in;
+  input stall;
+  input en;
+  input siic;
+  input rti;
+ 
+
+  output [15:0] instr_out, nxt_pc_out;
+  output [15:0] A_out, B_out;
+  output [4:0] AB_out;
+  output [15:0] se_5_out, ze_5_out, se_8_out, ze_8_out, se_11_out;
+  output se_out;
+  output [1:0] srcALU_out;
+  output [1:0] regDestination_out;
+  output memWrite_out, memtoreg_out, regWrite_out;
+  output inv_A_out, inv_B_out, cin_out;
+  output halt_out;
+  output siic_out;
+  output rti_out;
+
+  wire [15:0] instr_sel;
+  wire memWrite_sel, memtoreg_sel, regWrite_sel, halt_sel;
+
+  assign instr_sel = stall ? 16'h0800 : instr_in;
+
+  reg_16 instr(.clk(clk), .rst(rst), .en_w_or_r(en), .in(instr_sel), .out(instr_out));
+  reg_16 nextPC(.clk(clk), .rst(rst), .en_w_or_r(en), .in(nxt_pc_in), .out(nxt_pc_out));
+  reg_16 A(.clk(clk), .rst(rst), .en_w_or_r(en), .in(A_in), .out(A_out));
+  reg_16 B(.clk(clk), .rst(rst), .en_w_or_r(en), .in(B_in), .out(B_out));
+  reg_1 nA(.clk(clk), .rst(rst), .en_w_or_r(en), .in(inv_A_in), .out(inv_A_out));
+  reg_1 nB(.clk(clk), .rst(rst), .en_w_or_r(en), .in(inv_B_in), .out(inv_B_out));
+  reg_1 Cin(.clk(clk), .rst(rst), .en_w_or_r(en), .in(cin_in), .out(cin_out)); 
+  reg_5 AB(.clk(clk), .rst(rst), .en_w_or_r(en), .in(AB_in), .out(AB_out));
+  reg_16 SExt5(.clk(clk), .rst(rst), .en_w_or_r(en), .in(se_5_in), .out(se_5_out));
+  reg_16 ZExt5(.clk(clk), .rst(rst), .en_w_or_r(en), .in(ze_5_in), .out(ze_5_out));
+  reg_16 SExt8(.clk(clk), .rst(rst), .en_w_or_r(en), .in(se_8_in), .out(se_8_out));
+  reg_16 ZExt8(.clk(clk), .rst(rst), .en_w_or_r(en), .in(ze_8_in), .out(ze_8_out));
+  reg_16 SExt11(.clk(clk), .rst(rst), .en_w_or_r(en), .in(se_11_in), .out(se_11_out));
+  reg_1 SExt(.clk(clk), .rst(rst), .en_w_or_r(en), .in(se_in), .out(se_out));
+  reg_2 sourceALU(.clk(clk), .rst(rst), .en_w_or_r(en), .in(srcALU_in), .out(srcALU_out));
+  reg_2 regDestination(.clk(clk), .rst(rst), .en_w_or_r(en), .in(regDestination_in), .out(regDestination_out));
+ 
+  
+
+  assign memWrite_sel = stall ? 1'b0 : memWrite_in;
+  reg_1 memWrite(.clk(clk), .rst(rst), .en_w_or_r(en), .in(memWrite_sel), .out(memWrite_out));
+
+  assign memtoreg_sel = stall ? 1'b0 : memtoreg_in;
+  reg_1 mem_to_reg(.clk(clk), .rst(rst), .en_w_or_r(en), .in(memtoreg_sel), .out(memtoreg_out));
+ 
+  assign regWrite_sel = stall ? 1'b0 : regWrite_in;
+  reg_1 regWrite(.clk(clk), .rst(rst), .en_w_or_r(en), .in(regWrite_sel), .out(regWrite_out));
+
+  assign halt_sel = stall ? 1'b0 : halt_in;
+  reg_1 halt(.clk(clk), .rst(rst), .en_w_or_r(en), .in(halt_sel), .out(halt_out));
+
+  assign siic_sel = stall ? 1'b0 : siic;
+  reg_1 SIIC(.clk(clk), .rst(rst), .en_w_or_r(en), .in(siic_sel), .out(siic_out));
+
+  assign rti_sel = stall ? 1'b0 : rti;
+  reg_1 RTI(.clk(clk), .rst(rst), .en_w_or_r(en), .in(rti_sel), .out(rti_out));
+endmodule

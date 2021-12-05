@@ -1,0 +1,12 @@
+          // Test provided by Karu 
+0000 2006 j .realstart
+0002 c000 lbi r0,0
+0004 1800 rti
+0006 0000 halt
+          
+0008      .realstart:
+0008 c100 lbi r1,0
+000a c000 lbi r0,0
+000c 1600 siic r6
+000e c42c lbi r4, 44
+0010 0000 halt

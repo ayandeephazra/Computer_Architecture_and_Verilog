@@ -1,0 +1,49 @@
+module hazard_detection_unit (siic, rti, AB, wrt_sel_IDEX, wrt_sel_EXMEM, wrt_sel_MEMWB, rd_reg1_IFID, rd_reg2_IFID, wrt_reg_IDEX, wrt_reg_EXMEM, wrt_reg_MEMWB, stall, enPC, enIFID);
+
+  input wrt_reg_IDEX, wrt_reg_EXMEM, wrt_reg_MEMWB;
+  input [4:0] AB;
+  input [2:0] wrt_sel_IDEX, wrt_sel_EXMEM, wrt_sel_MEMWB;
+  input [2:0] rd_reg1_IFID, rd_reg2_IFID;
+ input siic;
+  input rti;
+  output stall;
+  output enPC;
+  output enIFID;
+
+  wire HAZARD_1, HAZARD_2, HAZARD_3, HAZARD_4, HAZARD_5, HAZARD_6;
+  wire raw_condt_1, raw_condt_2, raw_condt_3;
+
+  assign stall = raw_condt_1 | raw_condt_2 | raw_condt_3 | siic | RTI;
+  assign enPC = stall ? 1'b0 : 1'b1;
+  assign enIFID = stall ? 1'b0 : 1'b1;
+
+/////////////////////////////////////////
+// 		RAW HAZARDS	       //
+/////////////////////////////////////////
+  assign HAZARD_1 = AB[1] & (wrt_sel_IDEX == rd_reg1_IFID);
+  assign HAZARD_2 = AB[0] & (wrt_sel_IDEX == rd_reg2_IFID);
+
+/////////////////////////////////////////
+// 		CONDITION 1            //
+/////////////////////////////////////////
+  assign raw_condt_1 = wrt_reg_IDEX & (HAZARD_1 | HAZARD_2);
+
+  assign HAZARD_3 = AB[1] & (wrt_sel_EXMEM == rd_reg1_IFID);
+  assign HAZARD_4 = AB[0] & (wrt_sel_EXMEM == rd_reg2_IFID);
+
+/////////////////////////////////////////
+// 		CONDITION 2            //
+/////////////////////////////////////////
+  assign raw_condt_2 = wrt_reg_EXMEM & (HAZARD_3 | HAZARD_4);
+
+  assign HAZARD_5 = AB[1] & (wrt_sel_MEMWB == rd_reg1_IFID);
+  assign HAZARD_6 = AB[0] & (wrt_sel_MEMWB == rd_reg2_IFID);
+
+/////////////////////////////////////////
+// 		CONDITION 3            //
+/////////////////////////////////////////
+  assign raw_condt_3 = wrt_reg_MEMWB & (HAZARD_5 | HAZARD_6);
+
+  
+
+endmodule

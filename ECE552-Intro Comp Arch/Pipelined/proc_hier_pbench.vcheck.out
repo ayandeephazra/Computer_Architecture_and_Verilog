@@ -1,0 +1,22 @@
+Line 30: Bad keyword integer
+Line 31: Bad keyword integer
+Line 32: Bad keyword integer
+Line 34: Bad keyword integer
+Line 35: Bad keyword integer
+Line 36: Bad keyword integer
+Line 37: Bad keyword integer
+Line 43: Bad keyword initial
+Line 44: begin without always/case
+Line 57: Bad keyword posedge
+Line 58: Bad keyword if
+Line 59: Bad keyword if
+Line 62: Bad keyword if
+Line 65: Bad keyword if
+Line 68: Bad keyword if
+Line 71: Bad keyword if
+Line 86: Bad keyword if
+Line 91: Bad keyword if
+Line 96: Bad keyword if
+Line 100: Bad keyword if
+Line 57: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/pipe2000/proc_hier_pbench.v. Hash = -1141669705
