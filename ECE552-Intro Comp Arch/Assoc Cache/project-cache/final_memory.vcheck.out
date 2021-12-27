@@ -1,0 +1,20 @@
+Line 75: Bad keyword integer
+Line 76: Bad keyword integer
+Line 77: Bad keyword integer
+Line 104: Bad keyword initial
+Line 105: begin without always/case
+Line 109: Bad keyword posedge
+Line 110: Bad keyword if
+Line 111: Bad keyword if
+Line 112: Bad keyword for
+Line 124: Bad keyword else
+Line 125: begin without always/case
+Line 125: Bad keyword if
+Line 126: begin without always/case
+Line 128: Bad keyword if
+Line 130: Bad keyword if
+Line 131: begin without always/case
+Line 131: Case(x) without always
+Line 137: Bad keyword for
+Line 138: begin without always/case
+End of file /u/a/y/ayan/private/cs552/cache1/final_memory.v. Hash = -19787461

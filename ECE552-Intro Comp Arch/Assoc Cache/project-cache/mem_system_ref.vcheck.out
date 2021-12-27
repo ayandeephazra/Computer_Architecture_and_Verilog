@@ -1,0 +1,12 @@
+Line 31: Bad keyword integer
+Line 35: Bad keyword initial
+Line 36: begin without always/case
+Line 37: Bad keyword for
+Line 38: begin without always/case
+Line 43: Bad keyword if
+Line 44: Bad keyword if
+Line 48: Bad keyword else
+Line 49: Bad keyword if
+Line 52: Bad keyword if
+Line 42: Always without case(x)
+End of file /u/a/y/ayan/private/cs552/cache1/mem_system_ref.v. Hash = 1552918977
