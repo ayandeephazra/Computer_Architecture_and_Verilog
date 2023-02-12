@@ -1,0 +1,37 @@
+{C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/I2C24Wrt.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/I2C24Wrt.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module I2C24Wrt
+
+Top level modules:
+	I2C24Wrt
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/CODEC_cfg.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/CODEC_cfg.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CODEC_cfg
+
+Top level modules:
+	CODEC_cfg
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/CODEC_cfg_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/CODEC_cfg_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CODEC_cfg_tb
+
+Top level modules:
+	CODEC_cfg_tb
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/I2C_tb.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/I2C_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module I2C_tb
+
+Top level modules:
+	I2C_tb
+
+} {} {}} {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/full_adder18.sv} {1 {vlog -work work -sv -stats=none {C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/DE1-SoC_v.5.1.1_HWrevF_SystemCD/Tools/SystemBuilder/CodeGenerated/DE1_SOC/AudioTut/full_adder18.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module full_adder18
+-- Compiling module full_adder1
+
+Top level modules:
+	full_adder18
+
+} {} {}}

@@ -1,0 +1,58 @@
+
+State Machine - |AudioTut|VGA_timing:iVGATM|Vstate
+Name Vstate.V_FP Vstate.V_FRAME Vstate.V_BP Vstate.V_SYNCH 
+Vstate.V_SYNCH 0 0 0 0 
+Vstate.V_BP 0 0 1 1 
+Vstate.V_FRAME 0 1 0 1 
+Vstate.V_FP 1 0 0 1 
+
+State Machine - |AudioTut|VGA_timing:iVGATM|Hstate
+Name Hstate.H_FP Hstate.H_LINE Hstate.H_BP Hstate.H_SYNCH 
+Hstate.H_SYNCH 0 0 0 0 
+Hstate.H_BP 0 0 1 1 
+Hstate.H_LINE 0 1 0 1 
+Hstate.H_FP 1 0 0 1 
+
+State Machine - |AudioTut|CODEC_cfg:iCFG|state
+Name state.NINE_T state.NINE state.SEVEN_T state.SEVEN state.SIX_T state.SIX state.FIVE_T state.FIVE state.FOUR_T state.FOUR state.ONE_T state.ONE state.ZERO_T state.ZERO state.TIMER state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.TIMER 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.ZERO 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.ZERO_T 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.ONE 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.ONE_T 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.FOUR 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.FOUR_T 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.FIVE 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.FIVE_T 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.SIX 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.SIX_T 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.SEVEN 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.SEVEN_T 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.NINE 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.NINE_T 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|state
+Name state.STOP state.ACK3 state.LOW_BYTE state.ACK2 state.HIGH_BYTE state.ACK1 state.ADDR state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 
+state.ADDR 0 0 0 0 0 0 1 1 
+state.ACK1 0 0 0 0 0 1 0 1 
+state.HIGH_BYTE 0 0 0 0 1 0 0 1 
+state.ACK2 0 0 0 1 0 0 0 1 
+state.LOW_BYTE 0 0 1 0 0 0 0 1 
+state.ACK3 0 1 0 0 0 0 0 1 
+state.STOP 1 0 0 0 0 0 0 1 
+
+State Machine - |AudioTut|A2D_intf:iADC|state
+Name state.CONV state.READ state.FIRST state.WAIT 
+state.WAIT 0 0 0 0 
+state.FIRST 0 0 1 1 
+state.READ 0 1 0 1 
+state.CONV 1 0 0 1 
+
+State Machine - |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n000
+Name n000.S3 n000.S2 n000.S1 n000.S0 
+n000.S0 0 0 0 0 
+n000.S1 0 0 1 1 
+n000.S2 0 1 0 1 
+n000.S3 1 0 0 1 

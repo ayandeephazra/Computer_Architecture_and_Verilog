@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sun Feb 12 17:05:41 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : AudioTut
+Top-level Entity Name : AudioTut
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 402
+Total pins : 56
+Total virtual pins : 0
+Total block memory bits : 2,400
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

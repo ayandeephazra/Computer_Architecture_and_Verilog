@@ -1,0 +1,1332 @@
+Analysis & Synthesis report for AudioTut
+Sun Feb 12 17:05:41 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. Analysis & Synthesis IP Cores Summary
+ 11. State Machine - |AudioTut|VGA_timing:iVGATM|Vstate
+ 12. State Machine - |AudioTut|VGA_timing:iVGATM|Hstate
+ 13. State Machine - |AudioTut|CODEC_cfg:iCFG|state
+ 14. State Machine - |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|state
+ 15. State Machine - |AudioTut|A2D_intf:iADC|state
+ 16. State Machine - |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n000
+ 17. Registers Removed During Synthesis
+ 18. Removed Registers Triggering Further Register Optimizations
+ 19. General Register Statistics
+ 20. Inverted Register Statistics
+ 21. Registers Packed Into Inferred Megafunctions
+ 22. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 23. Source assignments for DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated
+ 24. Source assignments for DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated
+ 25. Parameter Settings for User Entity Instance: PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i
+ 26. Parameter Settings for Inferred Entity Instance: DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0
+ 27. Parameter Settings for Inferred Entity Instance: DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Port Connectivity Checks: "DrawLogic:comb_132|DPRAM120x16:iRHTQueue"
+ 30. Port Connectivity Checks: "DrawLogic:comb_132|DPRAM120x16:iLFTQueue"
+ 31. Port Connectivity Checks: "CODEC_cfg:iCFG|I2C24Wrt:iDUT"
+ 32. Port Connectivity Checks: "CODEC_cfg:iCFG|full_adder18:fa18"
+ 33. Port Connectivity Checks: "CODEC_cfg:iCFG"
+ 34. Port Connectivity Checks: "A2D_intf:iADC|SPI_M:iSPI"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++---------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Sun Feb 12 17:05:41 2023          ;
+; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                   ; AudioTut                                       ;
+; Top-level Entity Name           ; AudioTut                                       ;
+; Family                          ; Cyclone V                                      ;
+; Logic utilization (in ALMs)     ; N/A                                            ;
+; Total registers                 ; 402                                            ;
+; Total pins                      ; 56                                             ;
+; Total virtual pins              ; 0                                              ;
+; Total block memory bits         ; 2,400                                          ;
+; Total DSP Blocks                ; 2                                              ;
+; Total HSSI RX PCSs              ; 0                                              ;
+; Total HSSI PMA RX Deserializers ; 0                                              ;
+; Total HSSI TX PCSs              ; 0                                              ;
+; Total HSSI PMA TX Serializers   ; 0                                              ;
+; Total PLLs                      ; 1                                              ;
+; Total DLLs                      ; 0                                              ;
++---------------------------------+------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; AudioTut           ; AudioTut           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+; CODEC_cfg.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv           ;         ;
+; full_adder18.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/full_adder18.sv        ;         ;
+; DP_RAM120x16.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DP_RAM120x16.sv        ;         ;
+; DrawLogic.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv           ;         ;
+; AudioScale.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioScale.sv          ;         ;
+; SPI_M.sv                         ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/SPI_M.sv               ;         ;
+; A2D_intf.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/A2D_intf.sv            ;         ;
+; VGA_timing.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv          ;         ;
+; rst_synch.v                      ; yes             ; User Verilog HDL File        ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/rst_synch.v            ;         ;
+; I2C24Wrt.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/I2C24Wrt.sv            ;         ;
+; codec_intf.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/codec_intf.sv          ;         ;
+; AudioTut.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v             ;         ;
+; PLL.v                            ; yes             ; User Wizard-Generated File   ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL.v                  ; PLL     ;
+; PLL/PLL_0002.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL/PLL_0002.v         ; PLL     ;
+; altera_pll.v                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altera_pll.v                                       ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
+; aglobal221.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc                                     ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
+; altrom.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
+; altram.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc                                         ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
+; db/altsyncram_m5n1.tdf           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/db/altsyncram_m5n1.tdf ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                                     ;
++---------------------------------------------+-------------------------------------------------------------------+
+; Resource                                    ; Usage                                                             ;
++---------------------------------------------+-------------------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 295                                                               ;
+;                                             ;                                                                   ;
+; Combinational ALUT usage for logic          ; 505                                                               ;
+;     -- 7 input functions                    ; 0                                                                 ;
+;     -- 6 input functions                    ; 61                                                                ;
+;     -- 5 input functions                    ; 70                                                                ;
+;     -- 4 input functions                    ; 83                                                                ;
+;     -- <=3 input functions                  ; 291                                                               ;
+;                                             ;                                                                   ;
+; Dedicated logic registers                   ; 402                                                               ;
+;                                             ;                                                                   ;
+; I/O pins                                    ; 56                                                                ;
+; Total MLAB memory bits                      ; 0                                                                 ;
+; Total block memory bits                     ; 2400                                                              ;
+;                                             ;                                                                   ;
+; Total DSP Blocks                            ; 2                                                                 ;
+;                                             ;                                                                   ;
+; Total PLLs                                  ; 2                                                                 ;
+;     -- PLLs                                 ; 2                                                                 ;
+;                                             ;                                                                   ;
+; Maximum fan-out node                        ; PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i|outclk_wire[0] ;
+; Maximum fan-out                             ; 384                                                               ;
+; Total fan-out                               ; 3677                                                              ;
+; Average fan-out                             ; 3.51                                                              ;
++---------------------------------------------+-------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                    ; Entity Name     ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |AudioTut                                    ; 505 (39)            ; 402 (25)                  ; 2400              ; 2          ; 56   ; 0            ; |AudioTut                                                                                              ; AudioTut        ; work         ;
+;    |A2D_intf:iADC|                           ; 44 (19)             ; 59 (27)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|A2D_intf:iADC                                                                                ; A2D_intf        ; work         ;
+;       |SPI_M:iSPI|                           ; 25 (25)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|A2D_intf:iADC|SPI_M:iSPI                                                                     ; SPI_M           ; work         ;
+;    |AudioScale:iSCL|                         ; 0 (0)               ; 32 (32)                   ; 0                 ; 2          ; 0    ; 0            ; |AudioTut|AudioScale:iSCL                                                                              ; AudioScale      ; work         ;
+;    |CODEC_cfg:iCFG|                          ; 116 (53)            ; 91 (44)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|CODEC_cfg:iCFG                                                                               ; CODEC_cfg       ; work         ;
+;       |I2C24Wrt:iDUT|                        ; 63 (63)             ; 47 (47)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT                                                                 ; I2C24Wrt        ; work         ;
+;    |DrawLogic:comb_132|                      ; 196 (196)           ; 61 (61)                   ; 2400              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132                                                                           ; DrawLogic       ; work         ;
+;       |DPRAM120x16:iLFTQueue|                ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iLFTQueue                                                     ; DPRAM120x16     ; work         ;
+;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_m5n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated ; altsyncram_m5n1 ; work         ;
+;       |DPRAM120x16:iRHTQueue|                ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iRHTQueue                                                     ; DPRAM120x16     ; work         ;
+;          |altsyncram:mem_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0                                ; altsyncram      ; work         ;
+;             |altsyncram_m5n1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 1200              ; 0          ; 0    ; 0            ; |AudioTut|DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated ; altsyncram_m5n1 ; work         ;
+;    |PLL:iPLL|                                ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|PLL:iPLL                                                                                     ; PLL             ; PLL          ;
+;       |PLL_0002:pll_inst|                    ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|PLL:iPLL|PLL_0002:pll_inst                                                                   ; PLL_0002        ; PLL          ;
+;          |altera_pll:altera_pll_i|           ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i                                           ; altera_pll      ; work         ;
+;    |VGA_timing:iVGATM|                       ; 77 (77)             ; 40 (40)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|VGA_timing:iVGATM                                                                            ; VGA_timing      ; work         ;
+;    |codec_intf:iAUD|                         ; 33 (33)             ; 92 (92)                   ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|codec_intf:iAUD                                                                              ; codec_intf      ; work         ;
+;    |rst_synch:iRST|                          ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |AudioTut|rst_synch:iRST                                                                               ; rst_synch       ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                                    ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 120          ; 10           ; 120          ; 10           ; 1200 ; None ;
+; DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 120          ; 10           ; 120          ; 10           ; 1200 ; None ;
++---------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary    ;
++-----------------------------------+-------------+
+; Statistic                         ; Number Used ;
++-----------------------------------+-------------+
+; Two Independent 18x18             ; 2           ;
+; Total number of DSP blocks        ; 2           ;
+;                                   ;             ;
+; Fixed Point Mixed Sign Multiplier ; 2           ;
++-----------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance    ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------+
+; Altera ; altera_pll   ; 22.1    ; N/A          ; N/A          ; |AudioTut|PLL:iPLL ; PLL.v           ;
++--------+--------------+---------+--------------+--------------+--------------------+-----------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------+
+; State Machine - |AudioTut|VGA_timing:iVGATM|Vstate                           ;
++----------------+-------------+----------------+-------------+----------------+
+; Name           ; Vstate.V_FP ; Vstate.V_FRAME ; Vstate.V_BP ; Vstate.V_SYNCH ;
++----------------+-------------+----------------+-------------+----------------+
+; Vstate.V_SYNCH ; 0           ; 0              ; 0           ; 0              ;
+; Vstate.V_BP    ; 0           ; 0              ; 1           ; 1              ;
+; Vstate.V_FRAME ; 0           ; 1              ; 0           ; 1              ;
+; Vstate.V_FP    ; 1           ; 0              ; 0           ; 1              ;
++----------------+-------------+----------------+-------------+----------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------------------------+
+; State Machine - |AudioTut|VGA_timing:iVGATM|Hstate                          ;
++----------------+-------------+---------------+-------------+----------------+
+; Name           ; Hstate.H_FP ; Hstate.H_LINE ; Hstate.H_BP ; Hstate.H_SYNCH ;
++----------------+-------------+---------------+-------------+----------------+
+; Hstate.H_SYNCH ; 0           ; 0             ; 0           ; 0              ;
+; Hstate.H_BP    ; 0           ; 0             ; 1           ; 1              ;
+; Hstate.H_LINE  ; 0           ; 1             ; 0           ; 1              ;
+; Hstate.H_FP    ; 1           ; 0             ; 0           ; 1              ;
++----------------+-------------+---------------+-------------+----------------+
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |AudioTut|CODEC_cfg:iCFG|state                                                                                                                                                                                             ;
++---------------+--------------+------------+---------------+-------------+-------------+-----------+--------------+------------+--------------+------------+-------------+-----------+--------------+------------+-------------+------------+
+; Name          ; state.NINE_T ; state.NINE ; state.SEVEN_T ; state.SEVEN ; state.SIX_T ; state.SIX ; state.FIVE_T ; state.FIVE ; state.FOUR_T ; state.FOUR ; state.ONE_T ; state.ONE ; state.ZERO_T ; state.ZERO ; state.TIMER ; state.IDLE ;
++---------------+--------------+------------+---------------+-------------+-------------+-----------+--------------+------------+--------------+------------+-------------+-----------+--------------+------------+-------------+------------+
+; state.IDLE    ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 0          ;
+; state.TIMER   ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 1           ; 1          ;
+; state.ZERO    ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 1          ; 0           ; 1          ;
+; state.ZERO_T  ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 1            ; 0          ; 0           ; 1          ;
+; state.ONE     ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 1         ; 0            ; 0          ; 0           ; 1          ;
+; state.ONE_T   ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 1           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.FOUR    ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 1          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.FOUR_T  ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 1            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.FIVE    ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 1          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.FIVE_T  ; 0            ; 0          ; 0             ; 0           ; 0           ; 0         ; 1            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.SIX     ; 0            ; 0          ; 0             ; 0           ; 0           ; 1         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.SIX_T   ; 0            ; 0          ; 0             ; 0           ; 1           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.SEVEN   ; 0            ; 0          ; 0             ; 1           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.SEVEN_T ; 0            ; 0          ; 1             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.NINE    ; 0            ; 1          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
+; state.NINE_T  ; 1            ; 0          ; 0             ; 0           ; 0           ; 0         ; 0            ; 0          ; 0            ; 0          ; 0           ; 0         ; 0            ; 0          ; 0           ; 1          ;
++---------------+--------------+------------+---------------+-------------+-------------+-----------+--------------+------------+--------------+------------+-------------+-----------+--------------+------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|state                                                                     ;
++-----------------+------------+------------+----------------+------------+-----------------+------------+------------+------------+
+; Name            ; state.STOP ; state.ACK3 ; state.LOW_BYTE ; state.ACK2 ; state.HIGH_BYTE ; state.ACK1 ; state.ADDR ; state.IDLE ;
++-----------------+------------+------------+----------------+------------+-----------------+------------+------------+------------+
+; state.IDLE      ; 0          ; 0          ; 0              ; 0          ; 0               ; 0          ; 0          ; 0          ;
+; state.ADDR      ; 0          ; 0          ; 0              ; 0          ; 0               ; 0          ; 1          ; 1          ;
+; state.ACK1      ; 0          ; 0          ; 0              ; 0          ; 0               ; 1          ; 0          ; 1          ;
+; state.HIGH_BYTE ; 0          ; 0          ; 0              ; 0          ; 1               ; 0          ; 0          ; 1          ;
+; state.ACK2      ; 0          ; 0          ; 0              ; 1          ; 0               ; 0          ; 0          ; 1          ;
+; state.LOW_BYTE  ; 0          ; 0          ; 1              ; 0          ; 0               ; 0          ; 0          ; 1          ;
+; state.ACK3      ; 0          ; 1          ; 0              ; 0          ; 0               ; 0          ; 0          ; 1          ;
+; state.STOP      ; 1          ; 0          ; 0              ; 0          ; 0               ; 0          ; 0          ; 1          ;
++-----------------+------------+------------+----------------+------------+-----------------+------------+------------+------------+
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------+
+; State Machine - |AudioTut|A2D_intf:iADC|state                    ;
++-------------+------------+------------+-------------+------------+
+; Name        ; state.CONV ; state.READ ; state.FIRST ; state.WAIT ;
++-------------+------------+------------+-------------+------------+
+; state.WAIT  ; 0          ; 0          ; 0           ; 0          ;
+; state.FIRST ; 0          ; 0          ; 1           ; 1          ;
+; state.READ  ; 0          ; 1          ; 0           ; 1          ;
+; state.CONV  ; 1          ; 0          ; 0           ; 1          ;
++-------------+------------+------------+-------------+------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------+
+; State Machine - |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n000 ;
++---------+---------+---------+---------+-----------------+
+; Name    ; n000.S3 ; n000.S2 ; n000.S1 ; n000.S0         ;
++---------+---------+---------+---------+-----------------+
+; n000.S0 ; 0       ; 0       ; 0       ; 0               ;
+; n000.S1 ; 0       ; 0       ; 1       ; 1               ;
+; n000.S2 ; 0       ; 1       ; 0       ; 1               ;
+; n000.S3 ; 1       ; 0       ; 0       ; 1               ;
++---------+---------+---------+---------+-----------------+
+
+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; aud_sum[14]                            ; Lost fanout                            ;
+; A2D_intf:iADC|timer[0]                 ; Merged with codec_intf:iAUD|clk_cnt[0] ;
+; CODEC_cfg:iCFG|counter18[0]            ; Merged with codec_intf:iAUD|clk_cnt[0] ;
+; VGA_timing:iVGATM|Vstate~4             ; Lost fanout                            ;
+; VGA_timing:iVGATM|Vstate~5             ; Lost fanout                            ;
+; VGA_timing:iVGATM|Hstate~4             ; Lost fanout                            ;
+; VGA_timing:iVGATM|Hstate~5             ; Lost fanout                            ;
+; CODEC_cfg:iCFG|state~4                 ; Lost fanout                            ;
+; CODEC_cfg:iCFG|state~5                 ; Lost fanout                            ;
+; CODEC_cfg:iCFG|state~6                 ; Lost fanout                            ;
+; CODEC_cfg:iCFG|state~7                 ; Lost fanout                            ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|state~4   ; Lost fanout                            ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|state~5   ; Lost fanout                            ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|state~6   ; Lost fanout                            ;
+; A2D_intf:iADC|state~4                  ; Lost fanout                            ;
+; A2D_intf:iADC|state~5                  ; Lost fanout                            ;
+; A2D_intf:iADC|SPI_M:iSPI|n000~4        ; Lost fanout                            ;
+; A2D_intf:iADC|SPI_M:iSPI|n000~5        ; Lost fanout                            ;
+; DrawLogic:comb_132|rht_accum[22..24]   ; Lost fanout                            ;
+; DrawLogic:comb_132|lft_accum[22..24]   ; Lost fanout                            ;
+; Total Number of Removed Registers = 24 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                ;
++----------------------------------+--------------------+--------------------------------------------------------------------+
+; Register name                    ; Reason for Removal ; Registers Removed due to This Register                             ;
++----------------------------------+--------------------+--------------------------------------------------------------------+
+; DrawLogic:comb_132|rht_accum[24] ; Lost Fanouts       ; DrawLogic:comb_132|rht_accum[23], DrawLogic:comb_132|rht_accum[22] ;
+; DrawLogic:comb_132|lft_accum[24] ; Lost Fanouts       ; DrawLogic:comb_132|lft_accum[23], DrawLogic:comb_132|lft_accum[22] ;
++----------------------------------+--------------------+--------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 402   ;
+; Number of registers using Synchronous Clear  ; 95    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 272   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 274   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Inverted Register Statistics                        ;
++-------------------------------------------+---------+
+; Inverted Register                         ; Fan out ;
++-------------------------------------------+---------+
+; A2D_intf:iADC|SPI_M:iSPI|SS_n             ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|clk_div[5]   ; 7       ;
+; codec_intf:iAUD|clk_cnt[9]                ; 21      ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|clk_div[4]   ; 4       ;
+; codec_intf:iAUD|LRCLK                     ; 2       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[28] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[27] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[26] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[25] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[24] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[23] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[22] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[21] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[20] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[19] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[18] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[17] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[16] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[15] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[14] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[13] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[12] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[11] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[10] ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[9]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[8]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[7]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[6]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[5]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[4]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[3]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[2]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[1]  ; 1       ;
+; CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[0]  ; 1       ;
+; Total number of inverted registers = 34   ;         ;
++-------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                                                      ;
++-------------------------------------------------------+----------------------------------------------------+------+
+; Register Name                                         ; Megafunction                                       ; Type ;
++-------------------------------------------------------+----------------------------------------------------+------+
+; DrawLogic:comb_132|DPRAM120x16:iRHTQueue|rdata[3..12] ; DrawLogic:comb_132|DPRAM120x16:iRHTQueue|mem_rtl_0 ; RAM  ;
+; DrawLogic:comb_132|DPRAM120x16:iLFTQueue|rdata[3..12] ; DrawLogic:comb_132|DPRAM120x16:iLFTQueue|mem_rtl_0 ; RAM  ;
++-------------------------------------------------------+----------------------------------------------------+------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |AudioTut|VGA_timing:iVGATM|xpix_int[3]             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |AudioTut|VGA_timing:iVGATM|Vtmr[0]                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|bit_cntr[3]  ;
+; 3:1                ; 50 bits   ; 100 LEs       ; 0 LEs                ; 100 LEs                ; Yes        ; |AudioTut|DrawLogic:comb_132|lft_accum[9]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n004[15]         ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 0 LEs                ; 28 LEs                 ; Yes        ; |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n004[2]          ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 0 LEs                ; 18 LEs                 ; Yes        ; |AudioTut|VGA_timing:iVGATM|ypix[7]                 ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |AudioTut|A2D_intf:iADC|SPI_M:iSPI|n003[3]          ;
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |AudioTut|codec_intf:iAUD|shft_reg_out[15]          ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; Yes        ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[22] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|shft_reg[11] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |AudioTut|DrawLogic:comb_132|VGA_R[6]               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |AudioTut|A2D_intf:iADC|Selector3                   ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |AudioTut|A2D_intf:iADC|Selector1                   ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |AudioTut|VGA_timing:iVGATM|Selector9               ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 12 LEs               ; 8 LEs                  ; No         ; |AudioTut|VGA_timing:iVGATM|Selector4               ;
+; 11:1               ; 3 bits    ; 21 LEs        ; 12 LEs               ; 9 LEs                  ; No         ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|Selector1    ;
+; 13:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |AudioTut|CODEC_cfg:iCFG|I2C24Wrt:iDUT|Selector5    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Source assignments for DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0|altsyncram_m5n1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                    ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                     ;
++---------------------------------+--------------------+------+-------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i ;
++--------------------------------------+------------------------+---------------------------------+
+; Parameter Name                       ; Value                  ; Type                            ;
++--------------------------------------+------------------------+---------------------------------+
+; reference_clock_frequency            ; 50.0 MHz               ; String                          ;
+; fractional_vco_multiplier            ; false                  ; String                          ;
+; pll_type                             ; General                ; String                          ;
+; pll_subtype                          ; General                ; String                          ;
+; number_of_clocks                     ; 2                      ; Signed Integer                  ;
+; operation_mode                       ; direct                 ; String                          ;
+; deserialization_factor               ; 4                      ; Signed Integer                  ;
+; data_rate                            ; 0                      ; Signed Integer                  ;
+; sim_additional_refclk_cycles_to_lock ; 0                      ; Signed Integer                  ;
+; output_clock_frequency0              ; 50.000000 MHz          ; String                          ;
+; phase_shift0                         ; 0 ps                   ; String                          ;
+; duty_cycle0                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency1              ; 25.000000 MHz          ; String                          ;
+; phase_shift1                         ; 0 ps                   ; String                          ;
+; duty_cycle1                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency2              ; 0 MHz                  ; String                          ;
+; phase_shift2                         ; 0 ps                   ; String                          ;
+; duty_cycle2                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency3              ; 0 MHz                  ; String                          ;
+; phase_shift3                         ; 0 ps                   ; String                          ;
+; duty_cycle3                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency4              ; 0 MHz                  ; String                          ;
+; phase_shift4                         ; 0 ps                   ; String                          ;
+; duty_cycle4                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency5              ; 0 MHz                  ; String                          ;
+; phase_shift5                         ; 0 ps                   ; String                          ;
+; duty_cycle5                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency6              ; 0 MHz                  ; String                          ;
+; phase_shift6                         ; 0 ps                   ; String                          ;
+; duty_cycle6                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency7              ; 0 MHz                  ; String                          ;
+; phase_shift7                         ; 0 ps                   ; String                          ;
+; duty_cycle7                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency8              ; 0 MHz                  ; String                          ;
+; phase_shift8                         ; 0 ps                   ; String                          ;
+; duty_cycle8                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency9              ; 0 MHz                  ; String                          ;
+; phase_shift9                         ; 0 ps                   ; String                          ;
+; duty_cycle9                          ; 50                     ; Signed Integer                  ;
+; output_clock_frequency10             ; 0 MHz                  ; String                          ;
+; phase_shift10                        ; 0 ps                   ; String                          ;
+; duty_cycle10                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency11             ; 0 MHz                  ; String                          ;
+; phase_shift11                        ; 0 ps                   ; String                          ;
+; duty_cycle11                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency12             ; 0 MHz                  ; String                          ;
+; phase_shift12                        ; 0 ps                   ; String                          ;
+; duty_cycle12                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency13             ; 0 MHz                  ; String                          ;
+; phase_shift13                        ; 0 ps                   ; String                          ;
+; duty_cycle13                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency14             ; 0 MHz                  ; String                          ;
+; phase_shift14                        ; 0 ps                   ; String                          ;
+; duty_cycle14                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency15             ; 0 MHz                  ; String                          ;
+; phase_shift15                        ; 0 ps                   ; String                          ;
+; duty_cycle15                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency16             ; 0 MHz                  ; String                          ;
+; phase_shift16                        ; 0 ps                   ; String                          ;
+; duty_cycle16                         ; 50                     ; Signed Integer                  ;
+; output_clock_frequency17             ; 0 MHz                  ; String                          ;
+; phase_shift17                        ; 0 ps                   ; String                          ;
+; duty_cycle17                         ; 50                     ; Signed Integer                  ;
+; clock_name_0                         ;                        ; String                          ;
+; clock_name_1                         ;                        ; String                          ;
+; clock_name_2                         ;                        ; String                          ;
+; clock_name_3                         ;                        ; String                          ;
+; clock_name_4                         ;                        ; String                          ;
+; clock_name_5                         ;                        ; String                          ;
+; clock_name_6                         ;                        ; String                          ;
+; clock_name_7                         ;                        ; String                          ;
+; clock_name_8                         ;                        ; String                          ;
+; clock_name_global_0                  ; false                  ; String                          ;
+; clock_name_global_1                  ; false                  ; String                          ;
+; clock_name_global_2                  ; false                  ; String                          ;
+; clock_name_global_3                  ; false                  ; String                          ;
+; clock_name_global_4                  ; false                  ; String                          ;
+; clock_name_global_5                  ; false                  ; String                          ;
+; clock_name_global_6                  ; false                  ; String                          ;
+; clock_name_global_7                  ; false                  ; String                          ;
+; clock_name_global_8                  ; false                  ; String                          ;
+; m_cnt_hi_div                         ; 1                      ; Signed Integer                  ;
+; m_cnt_lo_div                         ; 1                      ; Signed Integer                  ;
+; m_cnt_bypass_en                      ; false                  ; String                          ;
+; m_cnt_odd_div_duty_en                ; false                  ; String                          ;
+; n_cnt_hi_div                         ; 1                      ; Signed Integer                  ;
+; n_cnt_lo_div                         ; 1                      ; Signed Integer                  ;
+; n_cnt_bypass_en                      ; false                  ; String                          ;
+; n_cnt_odd_div_duty_en                ; false                  ; String                          ;
+; c_cnt_hi_div0                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div0                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en0                     ; false                  ; String                          ;
+; c_cnt_in_src0                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en0               ; false                  ; String                          ;
+; c_cnt_prst0                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst0                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div1                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div1                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en1                     ; false                  ; String                          ;
+; c_cnt_in_src1                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en1               ; false                  ; String                          ;
+; c_cnt_prst1                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst1                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div2                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div2                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en2                     ; false                  ; String                          ;
+; c_cnt_in_src2                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en2               ; false                  ; String                          ;
+; c_cnt_prst2                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst2                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div3                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div3                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en3                     ; false                  ; String                          ;
+; c_cnt_in_src3                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en3               ; false                  ; String                          ;
+; c_cnt_prst3                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst3                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div4                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div4                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en4                     ; false                  ; String                          ;
+; c_cnt_in_src4                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en4               ; false                  ; String                          ;
+; c_cnt_prst4                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst4                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div5                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div5                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en5                     ; false                  ; String                          ;
+; c_cnt_in_src5                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en5               ; false                  ; String                          ;
+; c_cnt_prst5                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst5                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div6                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div6                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en6                     ; false                  ; String                          ;
+; c_cnt_in_src6                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en6               ; false                  ; String                          ;
+; c_cnt_prst6                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst6                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div7                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div7                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en7                     ; false                  ; String                          ;
+; c_cnt_in_src7                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en7               ; false                  ; String                          ;
+; c_cnt_prst7                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst7                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div8                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div8                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en8                     ; false                  ; String                          ;
+; c_cnt_in_src8                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en8               ; false                  ; String                          ;
+; c_cnt_prst8                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst8                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div9                        ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div9                        ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en9                     ; false                  ; String                          ;
+; c_cnt_in_src9                        ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en9               ; false                  ; String                          ;
+; c_cnt_prst9                          ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst9                   ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div10                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div10                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en10                    ; false                  ; String                          ;
+; c_cnt_in_src10                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en10              ; false                  ; String                          ;
+; c_cnt_prst10                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst10                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div11                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div11                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en11                    ; false                  ; String                          ;
+; c_cnt_in_src11                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en11              ; false                  ; String                          ;
+; c_cnt_prst11                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst11                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div12                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div12                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en12                    ; false                  ; String                          ;
+; c_cnt_in_src12                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en12              ; false                  ; String                          ;
+; c_cnt_prst12                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst12                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div13                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div13                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en13                    ; false                  ; String                          ;
+; c_cnt_in_src13                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en13              ; false                  ; String                          ;
+; c_cnt_prst13                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst13                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div14                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div14                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en14                    ; false                  ; String                          ;
+; c_cnt_in_src14                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en14              ; false                  ; String                          ;
+; c_cnt_prst14                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst14                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div15                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div15                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en15                    ; false                  ; String                          ;
+; c_cnt_in_src15                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en15              ; false                  ; String                          ;
+; c_cnt_prst15                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst15                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div16                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div16                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en16                    ; false                  ; String                          ;
+; c_cnt_in_src16                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en16              ; false                  ; String                          ;
+; c_cnt_prst16                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst16                  ; 0                      ; Signed Integer                  ;
+; c_cnt_hi_div17                       ; 1                      ; Signed Integer                  ;
+; c_cnt_lo_div17                       ; 1                      ; Signed Integer                  ;
+; c_cnt_bypass_en17                    ; false                  ; String                          ;
+; c_cnt_in_src17                       ; ph_mux_clk             ; String                          ;
+; c_cnt_odd_div_duty_en17              ; false                  ; String                          ;
+; c_cnt_prst17                         ; 1                      ; Signed Integer                  ;
+; c_cnt_ph_mux_prst17                  ; 0                      ; Signed Integer                  ;
+; pll_vco_div                          ; 1                      ; Signed Integer                  ;
+; pll_slf_rst                          ; false                  ; String                          ;
+; pll_bw_sel                           ; low                    ; String                          ;
+; pll_output_clk_frequency             ; 0 MHz                  ; String                          ;
+; pll_cp_current                       ; 0                      ; Signed Integer                  ;
+; pll_bwctrl                           ; 0                      ; Signed Integer                  ;
+; pll_fractional_division              ; 1                      ; Signed Integer                  ;
+; pll_fractional_cout                  ; 24                     ; Signed Integer                  ;
+; pll_dsm_out_sel                      ; 1st_order              ; String                          ;
+; mimic_fbclk_type                     ; gclk                   ; String                          ;
+; pll_fbclk_mux_1                      ; glb                    ; String                          ;
+; pll_fbclk_mux_2                      ; fb_1                   ; String                          ;
+; pll_m_cnt_in_src                     ; ph_mux_clk             ; String                          ;
+; pll_vcoph_div                        ; 1                      ; Signed Integer                  ;
+; refclk1_frequency                    ; 0 MHz                  ; String                          ;
+; pll_clkin_0_src                      ; clk_0                  ; String                          ;
+; pll_clkin_1_src                      ; clk_0                  ; String                          ;
+; pll_clk_loss_sw_en                   ; false                  ; String                          ;
+; pll_auto_clk_sw_en                   ; false                  ; String                          ;
+; pll_manu_clk_sw_en                   ; false                  ; String                          ;
+; pll_clk_sw_dly                       ; 0                      ; Signed Integer                  ;
+; pll_extclk_0_cnt_src                 ; pll_extclk_cnt_src_vss ; String                          ;
+; pll_extclk_1_cnt_src                 ; pll_extclk_cnt_src_vss ; String                          ;
++--------------------------------------+------------------------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                               ;
++------------------------------------+----------------------+----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                            ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                     ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                            ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                            ;
+; WIDTH_A                            ; 10                   ; Untyped                                            ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                            ;
+; NUMWORDS_A                         ; 120                  ; Untyped                                            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                            ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                            ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WIDTH_B                            ; 10                   ; Untyped                                            ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                            ;
+; NUMWORDS_B                         ; 120                  ; Untyped                                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                            ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                            ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                            ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                            ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                            ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                            ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                            ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                            ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                            ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                            ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                            ;
+; CBXI_PARAMETER                     ; altsyncram_m5n1      ; Untyped                                            ;
++------------------------------------+----------------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0 ;
++------------------------------------+----------------------+----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                               ;
++------------------------------------+----------------------+----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                            ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                         ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                       ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                       ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                     ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                            ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                            ;
+; WIDTH_A                            ; 10                   ; Untyped                                            ;
+; WIDTHAD_A                          ; 7                    ; Untyped                                            ;
+; NUMWORDS_A                         ; 120                  ; Untyped                                            ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                            ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                            ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                            ;
+; WIDTH_B                            ; 10                   ; Untyped                                            ;
+; WIDTHAD_B                          ; 7                    ; Untyped                                            ;
+; NUMWORDS_B                         ; 120                  ; Untyped                                            ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                            ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                            ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                            ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                            ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                            ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                            ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                            ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                            ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                            ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Untyped                                            ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                            ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                            ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                            ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                            ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                            ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                            ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                            ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                            ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                            ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                            ;
+; CBXI_PARAMETER                     ; altsyncram_m5n1      ; Untyped                                            ;
++------------------------------------+----------------------+----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                          ;
++-------------------------------------------+---------------------------------------------------------------+
+; Name                                      ; Value                                                         ;
++-------------------------------------------+---------------------------------------------------------------+
+; Number of entity instances                ; 2                                                             ;
+; Entity Instance                           ; DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                     ;
+;     -- WIDTH_A                            ; 10                                                            ;
+;     -- NUMWORDS_A                         ; 120                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 10                                                            ;
+;     -- NUMWORDS_B                         ; 120                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                      ;
+; Entity Instance                           ; DrawLogic:comb_132|DPRAM120x16:iLFTQueue|altsyncram:mem_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                     ;
+;     -- WIDTH_A                            ; 10                                                            ;
+;     -- NUMWORDS_A                         ; 120                                                           ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                  ;
+;     -- WIDTH_B                            ; 10                                                            ;
+;     -- NUMWORDS_B                         ; 120                                                           ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                      ;
++-------------------------------------------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DrawLogic:comb_132|DPRAM120x16:iRHTQueue"                                                                                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rdata         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (17 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; rdata[15..13] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
+; rdata[2..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DrawLogic:comb_132|DPRAM120x16:iLFTQueue"                                                                                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; rdata         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (17 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; rdata[15..13] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
+; rdata[2..0]   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CODEC_cfg:iCFG|I2C24Wrt:iDUT"                                                                 ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                             ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+; data16[15..13] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data16[7]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; data16[3]      ; Input  ; Info     ; Stuck at GND                                                                        ;
+; done           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; err            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Port Connectivity Checks: "CODEC_cfg:iCFG|full_adder18:fa18" ;
++----------+--------+----------+-------------------------------+
+; Port     ; Type   ; Severity ; Details                       ;
++----------+--------+----------+-------------------------------+
+; b[17..1] ; Input  ; Info     ; Stuck at GND                  ;
+; b[0]     ; Input  ; Info     ; Stuck at VCC                  ;
+; cin      ; Input  ; Info     ; Stuck at GND                  ;
+; cout     ; Output ; Info     ; Explicitly unconnected        ;
++----------+--------+----------+-------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CODEC_cfg:iCFG"                                                                         ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cfg_done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "A2D_intf:iADC|SPI_M:iSPI"                                                                    ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                             ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+; rd_data[3..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; cmd[14..12]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cmd[10..0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cmd[15]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; cmd[11]       ; Input  ; Info     ; Stuck at VCC                                                                        ;
++---------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 402                         ;
+;     CLR               ; 93                          ;
+;     CLR SCLR          ; 7                           ;
+;     ENA               ; 102                         ;
+;     ENA CLR           ; 95                          ;
+;     ENA CLR SCLR      ; 77                          ;
+;     SCLR              ; 11                          ;
+;     plain             ; 17                          ;
+; arriav_io_obuf        ; 4                           ;
+; arriav_lcell_comb     ; 509                         ;
+;     arith             ; 212                         ;
+;         1 data inputs ; 142                         ;
+;         2 data inputs ; 38                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 30                          ;
+;     normal            ; 283                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 50                          ;
+;         3 data inputs ; 41                          ;
+;         4 data inputs ; 53                          ;
+;         5 data inputs ; 70                          ;
+;         6 data inputs ; 61                          ;
+;     shared            ; 14                          ;
+;         2 data inputs ; 14                          ;
+; arriav_mac            ; 2                           ;
+; boundary_port         ; 56                          ;
+; generic_pll           ; 2                           ;
+; stratixv_ram_block    ; 20                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.45                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sun Feb 12 17:05:26 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AudioTut -c AudioTut
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file i2c_tb.sv
+    Info (12023): Found entity 1: I2C_tb File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/I2C_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file codec_cfg_tb.sv
+    Info (12023): Found entity 1: CODEC_cfg_tb File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file codec_cfg.sv
+    Info (12023): Found entity 1: CODEC_cfg File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 2
+Info (12021): Found 2 design units, including 2 entities, in source file full_adder18.sv
+    Info (12023): Found entity 1: full_adder18 File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/full_adder18.sv Line: 1
+    Info (12023): Found entity 2: full_adder1 File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/full_adder18.sv Line: 29
+Info (12021): Found 1 design units, including 1 entities, in source file dp_ram120x16.sv
+    Info (12023): Found entity 1: DPRAM120x16 File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DP_RAM120x16.sv Line: 1
+Warning (10229): Verilog HDL Expression warning at DrawLogic.sv(65): truncated literal to match 7 bits File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 65
+Info (12021): Found 1 design units, including 1 entities, in source file drawlogic.sv
+    Info (12023): Found entity 1: DrawLogic File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file audioscale.sv
+    Info (12023): Found entity 1: AudioScale File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioScale.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file spi_m.sv
+    Info (12023): Found entity 1: SPI_M File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/SPI_M.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file a2d_intf.sv
+    Info (12023): Found entity 1: A2D_intf File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/A2D_intf.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file vga_timing.sv
+    Info (12023): Found entity 1: VGA_timing File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rst_synch.v
+    Info (12023): Found entity 1: rst_synch File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/rst_synch.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file i2c24wrt.sv
+    Info (12023): Found entity 1: I2C24Wrt File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/I2C24Wrt.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file codec_intf.sv
+    Info (12023): Found entity 1: codec_intf File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/codec_intf.sv Line: 1
+Warning (12019): Can't analyze file -- file CODEC_configurator.sv is missing
+Info (12021): Found 1 design units, including 1 entities, in source file audiotut.v
+    Info (12023): Found entity 1: AudioTut File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file pll.v
+    Info (12023): Found entity 1: PLL File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file pll/pll_0002.v
+    Info (12023): Found entity 1: PLL_0002 File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL/PLL_0002.v Line: 2
+Warning (10236): Verilog HDL Implicit Net warning at CODEC_cfg.sv(138): created implicit net for "done" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 138
+Warning (10236): Verilog HDL Implicit Net warning at CODEC_cfg.sv(139): created implicit net for "err" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 139
+Warning (10236): Verilog HDL Implicit Net warning at codec_intf.sv(44): created implicit net for "LRCLK_early" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/codec_intf.sv Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at codec_intf.sv(60): created implicit net for "LRCLK_rising" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/codec_intf.sv Line: 60
+Critical Warning (10846): Verilog HDL Instantiation warning at AudioTut.v(124): instance has no name File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 124
+Info (12127): Elaborating entity "AudioTut" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at AudioTut.v(109): truncated value with size 12 to match size of target (10) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 109
+Info (12128): Elaborating entity "PLL" for hierarchy "PLL:iPLL" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 67
+Info (12128): Elaborating entity "PLL_0002" for hierarchy "PLL:iPLL|PLL_0002:pll_inst" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL.v Line: 22
+Info (12128): Elaborating entity "altera_pll" for hierarchy "PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL/PLL_0002.v Line: 88
+Info (10008): Verilog HDL or VHDL information: EDA Netlist Writer cannot regroup multidimensional array "wire_to_nowhere_64" into its bus
+Info (12130): Elaborated megafunction instantiation "PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL/PLL_0002.v Line: 88
+Info (12133): Instantiated megafunction "PLL:iPLL|PLL_0002:pll_inst|altera_pll:altera_pll_i" with the following parameter: File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/PLL/PLL_0002.v Line: 88
+    Info (12134): Parameter "fractional_vco_multiplier" = "false"
+    Info (12134): Parameter "reference_clock_frequency" = "50.0 MHz"
+    Info (12134): Parameter "operation_mode" = "direct"
+    Info (12134): Parameter "number_of_clocks" = "2"
+    Info (12134): Parameter "output_clock_frequency0" = "50.000000 MHz"
+    Info (12134): Parameter "phase_shift0" = "0 ps"
+    Info (12134): Parameter "duty_cycle0" = "50"
+    Info (12134): Parameter "output_clock_frequency1" = "25.000000 MHz"
+    Info (12134): Parameter "phase_shift1" = "0 ps"
+    Info (12134): Parameter "duty_cycle1" = "50"
+    Info (12134): Parameter "output_clock_frequency2" = "0 MHz"
+    Info (12134): Parameter "phase_shift2" = "0 ps"
+    Info (12134): Parameter "duty_cycle2" = "50"
+    Info (12134): Parameter "output_clock_frequency3" = "0 MHz"
+    Info (12134): Parameter "phase_shift3" = "0 ps"
+    Info (12134): Parameter "duty_cycle3" = "50"
+    Info (12134): Parameter "output_clock_frequency4" = "0 MHz"
+    Info (12134): Parameter "phase_shift4" = "0 ps"
+    Info (12134): Parameter "duty_cycle4" = "50"
+    Info (12134): Parameter "output_clock_frequency5" = "0 MHz"
+    Info (12134): Parameter "phase_shift5" = "0 ps"
+    Info (12134): Parameter "duty_cycle5" = "50"
+    Info (12134): Parameter "output_clock_frequency6" = "0 MHz"
+    Info (12134): Parameter "phase_shift6" = "0 ps"
+    Info (12134): Parameter "duty_cycle6" = "50"
+    Info (12134): Parameter "output_clock_frequency7" = "0 MHz"
+    Info (12134): Parameter "phase_shift7" = "0 ps"
+    Info (12134): Parameter "duty_cycle7" = "50"
+    Info (12134): Parameter "output_clock_frequency8" = "0 MHz"
+    Info (12134): Parameter "phase_shift8" = "0 ps"
+    Info (12134): Parameter "duty_cycle8" = "50"
+    Info (12134): Parameter "output_clock_frequency9" = "0 MHz"
+    Info (12134): Parameter "phase_shift9" = "0 ps"
+    Info (12134): Parameter "duty_cycle9" = "50"
+    Info (12134): Parameter "output_clock_frequency10" = "0 MHz"
+    Info (12134): Parameter "phase_shift10" = "0 ps"
+    Info (12134): Parameter "duty_cycle10" = "50"
+    Info (12134): Parameter "output_clock_frequency11" = "0 MHz"
+    Info (12134): Parameter "phase_shift11" = "0 ps"
+    Info (12134): Parameter "duty_cycle11" = "50"
+    Info (12134): Parameter "output_clock_frequency12" = "0 MHz"
+    Info (12134): Parameter "phase_shift12" = "0 ps"
+    Info (12134): Parameter "duty_cycle12" = "50"
+    Info (12134): Parameter "output_clock_frequency13" = "0 MHz"
+    Info (12134): Parameter "phase_shift13" = "0 ps"
+    Info (12134): Parameter "duty_cycle13" = "50"
+    Info (12134): Parameter "output_clock_frequency14" = "0 MHz"
+    Info (12134): Parameter "phase_shift14" = "0 ps"
+    Info (12134): Parameter "duty_cycle14" = "50"
+    Info (12134): Parameter "output_clock_frequency15" = "0 MHz"
+    Info (12134): Parameter "phase_shift15" = "0 ps"
+    Info (12134): Parameter "duty_cycle15" = "50"
+    Info (12134): Parameter "output_clock_frequency16" = "0 MHz"
+    Info (12134): Parameter "phase_shift16" = "0 ps"
+    Info (12134): Parameter "duty_cycle16" = "50"
+    Info (12134): Parameter "output_clock_frequency17" = "0 MHz"
+    Info (12134): Parameter "phase_shift17" = "0 ps"
+    Info (12134): Parameter "duty_cycle17" = "50"
+    Info (12134): Parameter "pll_type" = "General"
+    Info (12134): Parameter "pll_subtype" = "General"
+Info (12128): Elaborating entity "rst_synch" for hierarchy "rst_synch:iRST" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 72
+Info (12128): Elaborating entity "A2D_intf" for hierarchy "A2D_intf:iADC" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 78
+Warning (10230): Verilog HDL assignment warning at A2D_intf.sv(36): truncated value with size 32 to match size of target (12) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/A2D_intf.sv Line: 36
+Info (12128): Elaborating entity "SPI_M" for hierarchy "A2D_intf:iADC|SPI_M:iSPI" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/A2D_intf.sv Line: 99
+Info (12128): Elaborating entity "CODEC_cfg" for hierarchy "CODEC_cfg:iCFG" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 84
+Warning (10230): Verilog HDL assignment warning at CODEC_cfg.sv(35): truncated value with size 32 to match size of target (11) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 35
+Info (10264): Verilog HDL Case Statement information at CODEC_cfg.sv(48): all case item expressions in this case statement are onehot File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 48
+Info (12128): Elaborating entity "full_adder18" for hierarchy "CODEC_cfg:iCFG|full_adder18:fa18" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 18
+Info (12128): Elaborating entity "full_adder1" for hierarchy "CODEC_cfg:iCFG|full_adder18:fa18|full_adder1:op1" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/full_adder18.sv Line: 8
+Info (12128): Elaborating entity "I2C24Wrt" for hierarchy "CODEC_cfg:iCFG|I2C24Wrt:iDUT" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 139
+Warning (10230): Verilog HDL assignment warning at I2C24Wrt.sv(44): truncated value with size 32 to match size of target (6) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/I2C24Wrt.sv Line: 44
+Warning (10230): Verilog HDL assignment warning at I2C24Wrt.sv(70): truncated value with size 32 to match size of target (4) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/I2C24Wrt.sv Line: 70
+Info (12128): Elaborating entity "codec_intf" for hierarchy "codec_intf:iAUD" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 91
+Warning (10230): Verilog HDL assignment warning at codec_intf.sv(42): truncated value with size 32 to match size of target (10) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/codec_intf.sv Line: 42
+Info (12128): Elaborating entity "AudioScale" for hierarchy "AudioScale:iSCL" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 100
+Info (12128): Elaborating entity "VGA_timing" for hierarchy "VGA_timing:iVGATM" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 116
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(59): truncated value with size 32 to match size of target (7) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 59
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(66): truncated value with size 9 to match size of target (6) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 66
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(68): truncated value with size 9 to match size of target (6) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 68
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(70): truncated value with size 32 to match size of target (6) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 70
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(81): truncated value with size 32 to match size of target (10) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 81
+Warning (10230): Verilog HDL assignment warning at VGA_timing.sv(92): truncated value with size 32 to match size of target (9) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/VGA_timing.sv Line: 92
+Info (12128): Elaborating entity "DrawLogic" for hierarchy "DrawLogic:comb_132" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 124
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(45): truncated value with size 32 to match size of target (9) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 45
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(63): truncated value with size 32 to match size of target (7) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 63
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(77): truncated value with size 32 to match size of target (7) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 77
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(88): truncated value with size 11 to match size of target (8) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 88
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(90): truncated value with size 10 to match size of target (8) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(95): truncated value with size 10 to match size of target (8) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 95
+Warning (10230): Verilog HDL assignment warning at DrawLogic.sv(97): truncated value with size 10 to match size of target (8) File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 97
+Info (12128): Elaborating entity "DPRAM120x16" for hierarchy "DrawLogic:comb_132|DPRAM120x16:iLFTQueue" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/DrawLogic.sv Line: 82
+Info (19000): Inferred 2 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "DrawLogic:comb_132|DPRAM120x16:iRHTQueue|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 120
+        Info (286033): Parameter WIDTH_B set to 10
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 120
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "DrawLogic:comb_132|DPRAM120x16:iLFTQueue|mem_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 7
+        Info (286033): Parameter NUMWORDS_A set to 120
+        Info (286033): Parameter WIDTH_B set to 10
+        Info (286033): Parameter WIDTHAD_B set to 7
+        Info (286033): Parameter NUMWORDS_B set to 120
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+Info (12130): Elaborated megafunction instantiation "DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0"
+Info (12133): Instantiated megafunction "DrawLogic:comb_132|DPRAM120x16:iRHTQueue|altsyncram:mem_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "10"
+    Info (12134): Parameter "WIDTHAD_A" = "7"
+    Info (12134): Parameter "NUMWORDS_A" = "120"
+    Info (12134): Parameter "WIDTH_B" = "10"
+    Info (12134): Parameter "WIDTHAD_B" = "7"
+    Info (12134): Parameter "NUMWORDS_B" = "120"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_m5n1.tdf
+    Info (12023): Found entity 1: altsyncram_m5n1 File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/db/altsyncram_m5n1.tdf Line: 28
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13034): The following nodes have both tri-state and non-tri-state drivers
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_ADCLRCK" and its non-tri-state driver. File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 16
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_BCLK" and its non-tri-state driver. File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 17
+    Warning (13035): Inserted always-enabled tri-state buffer between "AUD_DACLRCK" and its non-tri-state driver. File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 19
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "AUD_ADCLRCK~synth" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 16
+    Warning (13010): Node "AUD_BCLK~synth" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 17
+    Warning (13010): Node "AUD_DACLRCK~synth" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 19
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "VGA_B[0]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[1]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[2]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[3]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[4]" is stuck at VCC File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[5]" is stuck at VCC File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[6]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_B[7]" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 40
+    Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 45
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 22 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 8 node(s), including 0 DDIO, 2 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "CLOCK2_50" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 23
+    Warning (15610): No output dependent on input pin "CLOCK3_50" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 24
+    Warning (15610): No output dependent on input pin "CLOCK4_50" File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 25
+Info (21057): Implemented 715 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 7 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21060): Implemented 4 bidirectional pins
+    Info (21061): Implemented 635 logic cells
+    Info (21064): Implemented 20 RAM segments
+    Info (21065): Implemented 2 PLLs
+    Info (21062): Implemented 2 DSP elements
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4842 megabytes
+    Info: Processing ended: Sun Feb 12 17:05:41 2023
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.map.smsg.
+
+

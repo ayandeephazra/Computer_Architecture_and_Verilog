@@ -1,0 +1,3 @@
+Warning (10268): Verilog HDL information at CODEC_cfg.sv(21): always construct contains both blocking and non-blocking assignments File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/CODEC_cfg.sv Line: 21
+Info (10281): Verilog HDL Declaration information at rst_synch.v(4): object "RST_n" differs only in case from object "rst_n" in the same scope File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/rst_synch.v Line: 4
+Info (10281): Verilog HDL Declaration information at AudioTut.v(33): object "RST_n" differs only in case from object "rst_n" in the same scope File: C:/Users/Ayan Deep Hazra/Desktop/Semesters/SPRING 2023/ECE554/Audio Tutorial/AudioTut/AudioTut.v Line: 33
